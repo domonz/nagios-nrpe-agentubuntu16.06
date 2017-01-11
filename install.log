@@ -1,0 +1,3433 @@
+Nagios Linux Agent Installation Log
+===================================
+DATE: Wed Jan 11 16:30:45 CET 2017
+
+DISTRO INFO:
+Ubuntu
+16.04
+x86_64
+
+Configuring Repos...
+Repos configured OK
+Installing prerequisites...
+Get:1 http://hu.archive.ubuntu.com/ubuntu xenial InRelease [247 kB]
+Get:2 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+Get:3 http://hu.archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
+Get:4 http://hu.archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
+Get:5 http://hu.archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [450 kB]
+Get:6 http://hu.archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages [442 kB]
+Get:7 http://hu.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [376 kB]
+Get:8 http://hu.archive.ubuntu.com/ubuntu xenial-updates/universe i386 Packages [371 kB]
+Fetched 2,193 kB in 0s (3,447 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+autoconf is already the newest version (2.69-9).
+autoconf set to manually installed.
+bc is already the newest version (1.06.95-9build1).
+dc is already the newest version (1.06.95-9build1).
+gawk is already the newest version (1:4.1.3+dfsg-0.1).
+gawk set to manually installed.
+gcc is already the newest version (4:5.3.1-1ubuntu1).
+gcc set to manually installed.
+make is already the newest version (4.1-6).
+make set to manually installed.
+libssl-dev is already the newest version (1.0.2g-1ubuntu4.5).
+sudo is already the newest version (1.8.16-0ubuntu1.2).
+sysstat is already the newest version (11.2.0-1ubuntu0.1).
+The following additional packages will be installed:
+  libc-dev-bin libc6-dev libfile-copy-recursive-perl update-inetd
+Suggested packages:
+  glibc-doc
+The following NEW packages will be installed:
+  libfile-copy-recursive-perl libmcrypt-dev update-inetd xinetd
+The following packages will be upgraded:
+  libc-dev-bin libc6 libc6-dev
+3 upgraded, 4 newly installed, 0 to remove and 46 not upgraded.
+Need to get 230 kB/4,966 kB of archives.
+After this operation, 931 kB of additional disk space will be used.
+Get:1 http://hu.archive.ubuntu.com/ubuntu xenial/main amd64 libfile-copy-recursive-perl all 0.38-1 [20.6 kB]
+Get:2 http://hu.archive.ubuntu.com/ubuntu xenial/universe amd64 libmcrypt-dev amd64 2.5.8-3.3 [83.7 kB]
+Get:3 http://hu.archive.ubuntu.com/ubuntu xenial/main amd64 update-inetd all 4.43 [19.2 kB]
+Get:4 http://hu.archive.ubuntu.com/ubuntu xenial/main amd64 xinetd amd64 1:2.3.15-6 [107 kB]
+Reading changelogs...
+Preconfiguring packages ...
+Fetched 230 kB in 0s (2,270 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 203641 files and directories currently installed.)
+Preparing to unpack .../libc6-dev_2.23-0ubuntu5_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.23-0ubuntu5) over (2.23-0ubuntu4) ...
+Preparing to unpack .../libc-dev-bin_2.23-0ubuntu5_amd64.deb ...
+Unpacking libc-dev-bin (2.23-0ubuntu5) over (2.23-0ubuntu4) ...
+Preparing to unpack .../libc6_2.23-0ubuntu5_amd64.deb ...
+Unpacking libc6:amd64 (2.23-0ubuntu5) over (2.23-0ubuntu4) ...
+Setting up libc6:amd64 (2.23-0ubuntu5) ...
+Processing triggers for libc-bin (2.23-0ubuntu4) ...
+Processing triggers for man-db (2.7.5-1) ...
+Selecting previously unselected package libfile-copy-recursive-perl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 203641 files and directories currently installed.)
+Preparing to unpack .../libfile-copy-recursive-perl_0.38-1_all.deb ...
+Unpacking libfile-copy-recursive-perl (0.38-1) ...
+Selecting previously unselected package libmcrypt-dev.
+Preparing to unpack .../libmcrypt-dev_2.5.8-3.3_amd64.deb ...
+Unpacking libmcrypt-dev (2.5.8-3.3) ...
+Selecting previously unselected package update-inetd.
+Preparing to unpack .../update-inetd_4.43_all.deb ...
+Unpacking update-inetd (4.43) ...
+Selecting previously unselected package xinetd.
+Preparing to unpack .../xinetd_1%3a2.3.15-6_amd64.deb ...
+Unpacking xinetd (1:2.3.15-6) ...
+Processing triggers for man-db (2.7.5-1) ...
+Processing triggers for ureadahead (0.100.0-19) ...
+Processing triggers for systemd (229-4ubuntu12) ...
+Setting up libc-dev-bin (2.23-0ubuntu5) ...
+Setting up libc6-dev:amd64 (2.23-0ubuntu5) ...
+Setting up libfile-copy-recursive-perl (0.38-1) ...
+Setting up libmcrypt-dev (2.5.8-3.3) ...
+Setting up update-inetd (4.43) ...
+Setting up xinetd (1:2.3.15-6) ...
+initctl: Unable to connect to Upstart: Failed to connect to socket /com/ubuntu/upstart: Connection refused
+insserv: warning: script 'screen-cleanup' missing LSB tags and overrides
+insserv: Default-Start undefined, assuming empty start runlevel(s) for script `screen-cleanup'
+insserv: Default-Stop  undefined, assuming empty stop  runlevel(s) for script `screen-cleanup'
+Processing triggers for systemd (229-4ubuntu12) ...
+Processing triggers for ureadahead (0.100.0-19) ...
+Prerequisites installed OK
+Adding users and groups...
+useradd: user 'nagios' already exists
+groupadd: group 'nagios' already exists
+useradd: user 'nagios' already exists
+Users and groups added OK
+/etc/services updated
+WARN: Duplicate profile 'Apache', using last found
+WARN: Duplicate profile 'Apache Secure', using last found
+WARN: Duplicate profile 'Apache Full', using last found
+Rules updated
+Rules updated (v6)
+WARN: Duplicate profile 'Apache', using last found
+WARN: Duplicate profile 'Apache Secure', using last found
+WARN: Duplicate profile 'Apache Full', using last found
+Rules updated
+Rules updated (v6)
+WARN: Duplicate profile 'Apache', using last found
+WARN: Duplicate profile 'Apache Secure', using last found
+WARN: Duplicate profile 'Apache Full', using last found
+Firewall not enabled (skipping reload)
+Firewall rules updated OK
+SUB
+NAGIOSPLUGINS
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether to disable maintainer-specific portions of Makefiles... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for Minix Amsterdam compiler... no
+checking for ar... ar
+checking for ranlib... ranlib
+checking whether gcc and cc understand -c and -o together... yes
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking whether gcc needs -traditional... no
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... (cached) ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for error_at_line... yes
+checking for special C compiler options needed for large files... (cached) no
+checking for _FILE_OFFSET_BITS value needed for large files... (cached) no
+checking for working strtod... yes
+checking for python... /usr/bin/python
+checking for sh... /bin/sh
+checking for perl... /usr/bin/perl
+checking for libgnutls-config... no
+checking for hostname... /bin/hostname
+checking for basename... /usr/bin/basename
+checking for main in -ldce... no
+checking for main in -lnsl... yes
+checking for socket in -lsocket... no
+checking for main in -lresolv... yes
+checking math.h usability... yes
+checking math.h presence... yes
+checking for math.h... yes
+checking for floor in -lm... yes
+checking mp.h usability... no
+checking mp.h presence... no
+checking for mp.h... no
+checking for pow in -lbsd... no
+checking for plan_tests in -ltap... no
+checking for main in -lcrypt... yes
+checking for PQsetdbLogin in -lpq... no
+configure: WARNING: Skipping PostgreSQL plugin (check_pgsql)
+configure: WARNING: LIBS="-lcrypt " CPPFLAGS=""
+configure: WARNING: install PostgreSQL libs to compile this plugin (see REQUIREMENTS).
+checking for dbi_initialize in -ldbi... no
+configure: WARNING: Skipping dbi plugin
+configure: WARNING: install DBI libs to compile this plugin (see REQUIREMENTS).
+checking for rc_read_config in -lfreeradius-client... no
+checking for rc_read_config in -lradiusclient-ng... no
+checking for rc_read_config in -lradiusclient... no
+configure: WARNING: Skipping radius plugin
+configure: WARNING: install radius libs to compile this plugin (see REQUIREMENTS).
+checking for main in -lldap... yes
+checking for ldap_set_option... yes
+checking for ldap_initialize... yes
+checking for ldap_init... yes
+checking for ldap_set_option... (cached) yes
+checking for ldap_get_option... yes
+checking for ldap_start_tls_s... yes
+checking linux/hdreg.h usability... yes
+checking linux/hdreg.h presence... yes
+checking for linux/hdreg.h... yes
+checking linux/types.h usability... yes
+checking linux/types.h presence... yes
+checking for linux/types.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for mysql_config... no
+configure: WARNING: Skipping mysql plugin
+configure: WARNING: install mysql client libs to compile this plugin (see REQUIREMENTS).
+checking utmpx.h usability... yes
+checking utmpx.h presence... yes
+checking for utmpx.h... yes
+checking for wtsapi32.h... no
+checking for IPv6 support... yes
+checking krb5.h usability... no
+checking krb5.h presence... no
+checking for krb5.h... no
+checking krb5.h usability... no
+checking krb5.h presence... no
+checking for krb5.h... no
+checking for dlopen in -ldl... yes
+checking for shl_load in -ldl... no
+checking openssl/ssl.h usability... yes
+checking openssl/ssl.h presence... yes
+checking for openssl/ssl.h... yes
+checking openssl/x509.h usability... yes
+checking openssl/x509.h presence... yes
+checking for openssl/x509.h... yes
+checking openssl/rsa.h usability... yes
+checking openssl/rsa.h presence... yes
+checking for openssl/rsa.h... yes
+checking openssl/pem.h usability... yes
+checking openssl/pem.h presence... yes
+checking for openssl/pem.h... yes
+checking openssl/crypto.h usability... yes
+checking openssl/crypto.h presence... yes
+checking for openssl/crypto.h... yes
+checking openssl/err.h usability... yes
+checking openssl/err.h presence... yes
+checking for openssl/err.h... yes
+checking for CRYPTO_lock in -lcrypto... yes
+checking for main in -lssl... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking uio.h usability... no
+checking uio.h presence... no
+checking for uio.h... no
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking for sys/time.h... (cached) yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/un.h usability... yes
+checking sys/un.h presence... yes
+checking for sys/un.h... yes
+checking sys/poll.h usability... yes
+checking sys/poll.h presence... yes
+checking for sys/poll.h... yes
+checking features.h usability... yes
+checking features.h presence... yes
+checking for features.h... yes
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking sys/unistd.h usability... yes
+checking sys/unistd.h presence... yes
+checking for sys/unistd.h... yes
+checking ctype.h usability... yes
+checking ctype.h presence... yes
+checking for ctype.h... yes
+checking for an ANSI C-conforming const... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for pid_t... yes
+checking for size_t... yes
+checking return type of signal handlers... void
+checking for va_copy... yes
+checking for memmove... yes
+checking for select... yes
+checking for socket... yes
+checking for strdup... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for strtoul... yes
+checking for floor... no
+checking for sigaction... yes
+checking for poll... yes
+checking return type of socket size... int
+checking for ps... /bin/ps
+checking for env... /usr/bin/env
+checking for ps syntax... /bin/ps axwwo 'stat uid pid ppid vsz rss pcpu cgroup:256 comm args'
+checking for ping... /bin/ping
+checking for ping6... /bin/ping6
+checking for ICMP ping syntax... /bin/ping -n -U -w %d -c %d %s
+checking for ICMPv6 ping syntax... /bin/ping6 -n -U -w %d -c %d %s
+checking for nslookup... /usr/bin/nslookup
+checking for nslookup syntax... /usr/bin/nslookup -sil
+checking for number of online cpus... sysconf(_SC_NPROCESSORS_ONLN)
+checking for number of available cpus... sysconf(_SC_NPROCESSORS_CONF)
+checking for uptime... /usr/bin/uptime
+checking for rpcinfo... /usr/sbin/rpcinfo
+checking for lmstat... no
+configure: WARNING: Get lmstat from Globetrotter Software to monitor flexlm licenses
+checking for smbclient... no
+configure: WARNING: Get smbclient from Samba.org to monitor SMB shares
+checking for snmpget... no
+configure: WARNING: Get snmpget from http://net-snmp.sourceforge.net to make check_hpjd and check_snmp plugins
+checking for snmpgetnext... no
+configure: WARNING: Tried /usr/bin/perl - install Net::SNMP perl module if you want to use the perl snmp plugins
+checking for quakestat... no
+checking for qstat... no
+configure: WARNING: Get qstat from http://www.activesw.com/people/steve/qstat.html in order to make check_game plugin
+checking for fping... no
+checking for fping6... no
+configure: WARNING: Get fping from http://www.fping.com in order to make check_fping plugin
+checking for ssh... /usr/bin/ssh
+checking for sudo... /usr/bin/sudo
+checking for mailq... /usr/bin/mailq
+checking for qmail-qstat... no
+configure: WARNING: Could not find qmail-qstat or eqivalent
+checking for swap... no
+checking for swapinfo... no
+checking for lsps... no
+checking for sys/stat.h... (cached) yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking for sys/swap.h... yes
+checking whether swapctl is declared... no
+checking for swaptbl_t... no
+checking for swapent_t... no
+checking for struct swapent.se_nblks... no
+checking for struct msghdr.msg_control... no
+checking for struct msghdr.msg_controllen... no
+checking for /proc/meminfo... found /proc/meminfo
+checking for dig... /usr/bin/dig
+checking for apt-get... /usr/bin/apt-get
+checking sys/sockio.h usability... no
+checking sys/sockio.h presence... no
+checking for sys/sockio.h... no
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for ld used by gcc... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking for shared library run path origin... done
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for main in -lpthread... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking for features.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... (cached) yes
+checking sys/vfs.h usability... yes
+checking sys/vfs.h presence... yes
+checking for sys/vfs.h... yes
+checking sys/fs_types.h usability... no
+checking sys/fs_types.h presence... no
+checking for sys/fs_types.h... no
+checking for sys/socket.h... (cached) yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking langinfo.h usability... yes
+checking langinfo.h presence... yes
+checking for langinfo.h... yes
+checking xlocale.h usability... yes
+checking xlocale.h presence... yes
+checking for xlocale.h... yes
+checking for math.h... (cached) yes
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking sys/statvfs.h usability... yes
+checking sys/statvfs.h presence... yes
+checking for sys/statvfs.h... yes
+checking wchar.h usability... yes
+checking wchar.h presence... yes
+checking for wchar.h... yes
+checking for stdint.h... (cached) yes
+checking for strings.h... (cached) yes
+checking sys/uio.h usability... yes
+checking sys/uio.h presence... yes
+checking for sys/uio.h... yes
+checking for sys/time.h... (cached) yes
+checking wctype.h usability... yes
+checking wctype.h presence... yes
+checking for wctype.h... yes
+checking whether the preprocessor supports include_next... yes
+checking whether system header files limit the line length... no
+checking for C/C++ restrict keyword... __restrict
+checking whether <wchar.h> uses 'inline' correctly... yes
+checking for btowc... yes
+checking for getuid... yes
+checking for geteuid... yes
+checking for getresuid... yes
+checking for getgid... yes
+checking for getegid... yes
+checking for getresgid... yes
+checking for setresuid... yes
+checking for setreuid... yes
+checking for seteuid... yes
+checking for setresgid... yes
+checking for setregid... yes
+checking for setegid... yes
+checking for symlink... yes
+checking for mbsinit... yes
+checking for mbrtowc... yes
+checking for mprotect... yes
+checking for _set_invalid_parameter_handler... no
+checking for nl_langinfo... yes
+checking for isblank... yes
+checking for iswctype... yes
+checking for wcscoll... yes
+checking for setenv... yes
+checking for snprintf... yes
+checking for strndup... yes
+checking for localtime_r... yes
+checking for timegm... yes
+checking for vasnprintf... no
+checking for wcrtomb... yes
+checking for iswcntrl... yes
+checking for nl_langinfo and CODESET... yes
+checking for a traditional french locale... none
+checking whether byte ordering is bigendian... no
+checking whether // is distinct from /... no
+checking if environ is properly declared... yes
+checking for complete errno.h... yes
+checking whether strerror_r is declared... yes
+checking for strerror_r... yes
+checking whether strerror_r returns char *... yes
+checking whether <sys/socket.h> is self-contained... yes
+checking for shutdown... yes
+checking whether <sys/socket.h> defines the SHUT_* macros... yes
+checking for struct sockaddr_storage... yes
+checking for sa_family_t... yes
+checking for struct sockaddr_storage.ss_family... yes
+checking whether socket is declared without a macro... yes
+checking whether connect is declared without a macro... yes
+checking whether accept is declared without a macro... yes
+checking whether bind is declared without a macro... yes
+checking whether getpeername is declared without a macro... yes
+checking whether getsockname is declared without a macro... yes
+checking whether getsockopt is declared without a macro... yes
+checking whether listen is declared without a macro... yes
+checking whether recv is declared without a macro... yes
+checking whether send is declared without a macro... yes
+checking whether recvfrom is declared without a macro... yes
+checking whether sendto is declared without a macro... yes
+checking whether setsockopt is declared without a macro... yes
+checking whether shutdown is declared without a macro... yes
+checking whether accept4 is declared without a macro... yes
+checking whether getaddrinfo is declared without a macro... yes
+checking whether freeaddrinfo is declared without a macro... yes
+checking whether gai_strerror is declared without a macro... yes
+checking whether getnameinfo is declared without a macro... yes
+checking for library containing gethostbyname... none required
+checking for gethostbyname... yes
+checking for library containing getservbyname... none required
+checking for getservbyname... yes
+checking for library containing inet_ntop... none required
+checking whether inet_ntop is declared... yes
+checking for IPv4 sockets... yes
+checking for IPv6 sockets... yes
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... yes
+checking for working GNU getopt function... yes
+checking for working GNU getopt_long function... yes
+checking whether getenv is declared... yes
+checking for working fcntl.h... yes
+checking whether getc_unlocked is declared... yes
+checking whether we are using the GNU C Library >= 2.1 or uClibc... yes
+checking for wchar_t... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking whether imported symbols can be declared weak... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for pthread_kill in -lpthread... yes
+checking for multithread API to use... posix
+checking whether malloc, realloc, calloc are POSIX compliant... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for unsigned long long int... yes
+checking for long long int... yes
+checking for mbstate_t... yes
+checking for a traditional japanese locale... none
+checking for a transitional chinese locale... none
+checking for a french Unicode locale... none
+checking for mmap... yes
+checking for MAP_ANONYMOUS... yes
+checking whether memchr works... yes
+checking whether alarm is declared... yes
+checking for inline... inline
+checking for ssize_t... yes
+checking whether setenv is declared... yes
+checking search.h usability... yes
+checking search.h presence... yes
+checking for search.h... yes
+checking for tsearch... yes
+checking whether snprintf returns a byte count as in C99... yes
+checking whether snprintf is declared... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking whether stdint.h conforms to C99... yes
+checking for strcasestr... yes
+checking whether strcasestr works... yes
+checking whether strerror(0) succeeds... yes
+checking whether ffsl is declared without a macro... yes
+checking whether ffsll is declared without a macro... yes
+checking whether memmem is declared without a macro... yes
+checking whether mempcpy is declared without a macro... yes
+checking whether memrchr is declared without a macro... yes
+checking whether rawmemchr is declared without a macro... yes
+checking whether stpcpy is declared without a macro... yes
+checking whether stpncpy is declared without a macro... yes
+checking whether strchrnul is declared without a macro... yes
+checking whether strdup is declared without a macro... yes
+checking whether strncat is declared without a macro... yes
+checking whether strndup is declared without a macro... yes
+checking whether strnlen is declared without a macro... yes
+checking whether strpbrk is declared without a macro... yes
+checking whether strsep is declared without a macro... yes
+checking whether strcasestr is declared without a macro... yes
+checking whether strtok_r is declared without a macro... yes
+checking whether strerror_r is declared without a macro... yes
+checking whether strsignal is declared without a macro... yes
+checking whether strverscmp is declared without a macro... yes
+checking whether ffs is declared without a macro... yes
+checking whether strcasecmp is declared without a macro... yes
+checking whether strncasecmp is declared without a macro... yes
+checking whether strndup is declared... (cached) yes
+checking whether strnlen is declared... (cached) yes
+checking for mode_t... yes
+checking for struct timespec in <time.h>... yes
+checking whether unsetenv is declared... yes
+checking for wint_t... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for intmax_t... yes
+checking where to find the exponent in a 'double'... word 1 bit 20
+checking for snprintf... (cached) yes
+checking for strnlen... yes
+checking for wcslen... yes
+checking for wcsnlen... yes
+checking for mbrtowc... (cached) yes
+checking for wcrtomb... (cached) yes
+checking whether _snprintf is declared... no
+checking whether vsnprintf is declared... yes
+checking for alloca as a compiler built-in... yes
+checking whether inet_ntop is declared without a macro... yes
+checking whether inet_pton is declared without a macro... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking whether btowc(0) is correct... yes
+checking whether btowc(EOF) is correct... guessing yes
+checking whether // is distinct from /... (cached) no
+checking for error_at_line... (cached) yes
+checking whether conversion from 'int' to 'long double' works... yes
+checking whether floorf is declared... yes
+checking for sys/mount.h... yes
+configure: checking how to get file system space usage
+checking for statvfs function (SVR4)... yes
+checking whether to use statvfs64... no
+checking for two-argument statfs with statfs.f_frsize member... yes
+checking dustat.h usability... no
+checking dustat.h presence... no
+checking for dustat.h... no
+checking sys/fs/s5param.h usability... no
+checking sys/fs/s5param.h presence... no
+checking for sys/fs/s5param.h... no
+checking sys/filsys.h usability... no
+checking sys/filsys.h presence... no
+checking for sys/filsys.h... no
+checking sys/statfs.h usability... yes
+checking sys/statfs.h presence... yes
+checking for sys/statfs.h... yes
+checking for statfs that truncates block counts... no
+configure: checking how to do getaddrinfo, freeaddrinfo and getnameinfo
+checking for library containing getaddrinfo... none required
+checking for getaddrinfo... yes
+checking whether gai_strerror is declared... (cached) yes
+checking whether gai_strerrorA is declared... no
+checking for gai_strerror with POSIX signature... yes
+checking for struct sockaddr.sa_len... no
+checking whether getaddrinfo is declared... (cached) yes
+checking whether freeaddrinfo is declared... (cached) yes
+checking whether getnameinfo is declared... (cached) yes
+checking for struct addrinfo... yes
+checking for gethostname... yes
+checking for HOST_NAME_MAX... yes
+checking for getloadavg... yes
+checking sys/loadavg.h usability... no
+checking sys/loadavg.h presence... no
+checking for sys/loadavg.h... no
+checking whether getloadavg is declared... yes
+checking for library containing gethostbyname... (cached) none required
+checking for gethostbyname... (cached) yes
+checking for library containing inet_ntop... (cached) none required
+checking whether inet_ntop is declared... (cached) yes
+checking whether langinfo.h defines CODESET... yes
+checking whether langinfo.h defines T_FMT_AMPM... yes
+checking whether langinfo.h defines ERA... yes
+checking whether langinfo.h defines YESEXPR... yes
+checking whether nl_langinfo is declared without a macro... yes
+checking whether locale.h conforms to POSIX:2001... yes
+checking whether locale.h defines locale_t... yes
+checking whether struct lconv is properly defined... yes
+checking whether setlocale is declared without a macro... yes
+checking whether duplocale is declared without a macro... yes
+checking for pthread_rwlock_t... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... (cached) yes
+checking whether NAN macro works... yes
+checking whether HUGE_VAL works... yes
+checking whether acosf is declared without a macro... yes
+checking whether acosl is declared without a macro... yes
+checking whether asinf is declared without a macro... yes
+checking whether asinl is declared without a macro... yes
+checking whether atanf is declared without a macro... yes
+checking whether atanl is declared without a macro... yes
+checking whether cbrt is declared without a macro... yes
+checking whether cbrtf is declared without a macro... yes
+checking whether cbrtl is declared without a macro... yes
+checking whether ceilf is declared without a macro... yes
+checking whether ceill is declared without a macro... yes
+checking whether copysign is declared without a macro... yes
+checking whether copysignf is declared without a macro... yes
+checking whether copysignl is declared without a macro... yes
+checking whether cosf is declared without a macro... yes
+checking whether cosl is declared without a macro... yes
+checking whether coshf is declared without a macro... yes
+checking whether expf is declared without a macro... yes
+checking whether expl is declared without a macro... yes
+checking whether exp2 is declared without a macro... yes
+checking whether exp2f is declared without a macro... yes
+checking whether exp2l is declared without a macro... yes
+checking whether expm1 is declared without a macro... yes
+checking whether expm1f is declared without a macro... yes
+checking whether expm1l is declared without a macro... yes
+checking whether fabsf is declared without a macro... yes
+checking whether fabsl is declared without a macro... yes
+checking whether floorf is declared without a macro... yes
+checking whether floorl is declared without a macro... yes
+checking whether fma is declared without a macro... yes
+checking whether fmaf is declared without a macro... yes
+checking whether fmal is declared without a macro... yes
+checking whether fmod is declared without a macro... yes
+checking whether fmodf is declared without a macro... yes
+checking whether fmodl is declared without a macro... yes
+checking whether frexpf is declared without a macro... yes
+checking whether frexpl is declared without a macro... yes
+checking whether hypotf is declared without a macro... yes
+checking whether hypotl is declared without a macro... yes
+checking whether ilogb is declared without a macro... yes
+checking whether ilogbf is declared without a macro... yes
+checking whether ilogbl is declared without a macro... yes
+checking whether ldexpf is declared without a macro... yes
+checking whether ldexpl is declared without a macro... yes
+checking whether log is declared without a macro... yes
+checking whether logf is declared without a macro... yes
+checking whether logl is declared without a macro... yes
+checking whether log10 is declared without a macro... yes
+checking whether log10f is declared without a macro... yes
+checking whether log10l is declared without a macro... yes
+checking whether log1p is declared without a macro... yes
+checking whether log1pf is declared without a macro... yes
+checking whether log1pl is declared without a macro... yes
+checking whether log2 is declared without a macro... yes
+checking whether log2f is declared without a macro... yes
+checking whether log2l is declared without a macro... yes
+checking whether logb is declared without a macro... yes
+checking whether logbf is declared without a macro... yes
+checking whether logbl is declared without a macro... yes
+checking whether modf is declared without a macro... yes
+checking whether modff is declared without a macro... yes
+checking whether modfl is declared without a macro... yes
+checking whether powf is declared without a macro... yes
+checking whether remainder is declared without a macro... yes
+checking whether remainderf is declared without a macro... yes
+checking whether remainderl is declared without a macro... yes
+checking whether rint is declared without a macro... yes
+checking whether rintf is declared without a macro... yes
+checking whether rintl is declared without a macro... yes
+checking whether round is declared without a macro... yes
+checking whether roundf is declared without a macro... yes
+checking whether roundl is declared without a macro... yes
+checking whether sinf is declared without a macro... yes
+checking whether sinl is declared without a macro... yes
+checking whether sinhf is declared without a macro... yes
+checking whether sqrtf is declared without a macro... yes
+checking whether sqrtl is declared without a macro... yes
+checking whether tanf is declared without a macro... yes
+checking whether tanl is declared without a macro... yes
+checking whether tanhf is declared without a macro... yes
+checking whether trunc is declared without a macro... yes
+checking whether truncf is declared without a macro... yes
+checking whether truncl is declared without a macro... yes
+checking whether mbrtowc handles incomplete characters... guessing yes
+checking whether mbrtowc works as well as mbtowc... guessing yes
+checking whether mbrtowc handles a NULL pwc argument... guessing yes
+checking whether mbrtowc handles a NULL string argument... guessing yes
+checking whether mbrtowc has a correct return value... guessing yes
+checking whether mbrtowc returns 0 when parsing a NUL character... guessing yes
+checking whether mbrtowc handles incomplete characters... (cached) guessing yes
+checking whether mbrtowc works as well as mbtowc... (cached) guessing yes
+checking for working mktime... yes
+checking for __mktime_internal... no
+checking for listmntent... no
+checking for getmntinfo... no
+checking for sys/ucred.h... no
+checking for sys/mount.h... (cached) yes
+checking mntent.h usability... yes
+checking mntent.h presence... yes
+checking for mntent.h... yes
+checking for sys/fs_types.h... (cached) no
+checking for struct fsstat.f_fstypename... no
+checking for library containing getmntent... none required
+checking for getmntent... yes
+checking for listmntent of Cray/Unicos-9... no
+checking for mntctl function and struct vmount... no
+checking for one-argument getmntent function... yes
+checking sys/mntent.h usability... no
+checking sys/mntent.h presence... no
+checking for sys/mntent.h... no
+checking for struct statfs.f_fstypename... no
+checking whether getaddrinfo is declared without a macro... (cached) yes
+checking whether freeaddrinfo is declared without a macro... (cached) yes
+checking whether gai_strerror is declared without a macro... (cached) yes
+checking whether getnameinfo is declared without a macro... (cached) yes
+checking whether <netinet/in.h> is self-contained... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking whether YESEXPR works... yes
+checking for working re_compile_pattern... yes
+checking for library containing getservbyname... (cached) none required
+checking for getservbyname... (cached) yes
+checking whether setenv validates arguments... yes
+checking for stdint.h... (cached) yes
+checking for SIZE_MAX... yes
+checking for snprintf... (cached) yes
+checking whether snprintf respects a size of 1... yes
+checking whether printf supports POSIX/XSI format strings with positions... yes
+checking for library containing setsockopt... none needed
+checking for socklen_t... yes
+checking for ssize_t... (cached) yes
+checking for working stdalign.h... yes
+checking whether NULL can be used in arbitrary expressions... (cached) yes
+checking whether dprintf is declared without a macro... yes
+checking whether fpurge is declared without a macro... no
+checking whether fseeko is declared without a macro... yes
+checking whether ftello is declared without a macro... yes
+checking whether getdelim is declared without a macro... yes
+checking whether getline is declared without a macro... yes
+checking whether gets is declared without a macro... no
+checking whether pclose is declared without a macro... yes
+checking whether popen is declared without a macro... yes
+checking whether renameat is declared without a macro... yes
+checking whether snprintf is declared without a macro... yes
+checking whether tmpfile is declared without a macro... yes
+checking whether vdprintf is declared without a macro... yes
+checking whether vsnprintf is declared without a macro... yes
+checking whether _Exit is declared without a macro... yes
+checking whether atoll is declared without a macro... yes
+checking whether canonicalize_file_name is declared without a macro... yes
+checking whether getloadavg is declared without a macro... yes
+checking whether getsubopt is declared without a macro... yes
+checking whether grantpt is declared without a macro... yes
+checking whether initstate is declared without a macro... yes
+checking whether initstate_r is declared without a macro... yes
+checking whether mkdtemp is declared without a macro... yes
+checking whether mkostemp is declared without a macro... yes
+checking whether mkostemps is declared without a macro... yes
+checking whether mkstemp is declared without a macro... yes
+checking whether mkstemps is declared without a macro... yes
+checking whether posix_openpt is declared without a macro... yes
+checking whether ptsname is declared without a macro... yes
+checking whether ptsname_r is declared without a macro... yes
+checking whether random is declared without a macro... yes
+checking whether random_r is declared without a macro... yes
+checking whether realpath is declared without a macro... yes
+checking whether rpmatch is declared without a macro... yes
+checking whether secure_getenv is declared without a macro... yes
+checking whether setenv is declared without a macro... yes
+checking whether setstate is declared without a macro... yes
+checking whether setstate_r is declared without a macro... yes
+checking whether srandom is declared without a macro... yes
+checking whether srandom_r is declared without a macro... yes
+checking whether strtod is declared without a macro... yes
+checking whether strtoll is declared without a macro... yes
+checking whether strtoull is declared without a macro... yes
+checking whether unlockpt is declared without a macro... yes
+checking whether unsetenv is declared without a macro... yes
+checking for strcasecmp... yes
+checking for strncasecmp... yes
+checking whether strncasecmp is declared... (cached) yes
+checking whether strcasestr works in linear time... yes
+checking for strcasestr... (cached) yes
+checking whether strcasestr works... (cached) yes
+checking for working strerror function... yes
+checking for working strndup... yes
+checking for working strnlen... yes
+checking for strsep... yes
+checking whether strstr works... yes
+checking whether <sys/socket.h> is self-contained... (cached) yes
+checking for shutdown... (cached) yes
+checking whether <sys/socket.h> defines the SHUT_* macros... (cached) yes
+checking for struct sockaddr_storage... (cached) yes
+checking for sa_family_t... (cached) yes
+checking for struct sockaddr_storage.ss_family... (cached) yes
+checking whether socket is declared without a macro... (cached) yes
+checking whether connect is declared without a macro... (cached) yes
+checking whether accept is declared without a macro... (cached) yes
+checking whether bind is declared without a macro... (cached) yes
+checking whether getpeername is declared without a macro... (cached) yes
+checking whether getsockname is declared without a macro... (cached) yes
+checking whether getsockopt is declared without a macro... (cached) yes
+checking whether listen is declared without a macro... (cached) yes
+checking whether recv is declared without a macro... (cached) yes
+checking whether send is declared without a macro... (cached) yes
+checking whether recvfrom is declared without a macro... (cached) yes
+checking whether sendto is declared without a macro... (cached) yes
+checking whether setsockopt is declared without a macro... (cached) yes
+checking whether shutdown is declared without a macro... (cached) yes
+checking whether accept4 is declared without a macro... (cached) yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking whether localtime_r is declared... yes
+checking whether localtime_r is compatible with its POSIX signature... yes
+checking whether chdir is declared without a macro... yes
+checking whether chown is declared without a macro... yes
+checking whether dup is declared without a macro... yes
+checking whether dup2 is declared without a macro... yes
+checking whether dup3 is declared without a macro... yes
+checking whether environ is declared without a macro... yes
+checking whether euidaccess is declared without a macro... yes
+checking whether faccessat is declared without a macro... yes
+checking whether fchdir is declared without a macro... yes
+checking whether fchownat is declared without a macro... yes
+checking whether fdatasync is declared without a macro... yes
+checking whether fsync is declared without a macro... yes
+checking whether ftruncate is declared without a macro... yes
+checking whether getcwd is declared without a macro... yes
+checking whether getdomainname is declared without a macro... yes
+checking whether getdtablesize is declared without a macro... yes
+checking whether getgroups is declared without a macro... yes
+checking whether gethostname is declared without a macro... yes
+checking whether getlogin is declared without a macro... yes
+checking whether getlogin_r is declared without a macro... yes
+checking whether getpagesize is declared without a macro... yes
+checking whether getusershell is declared without a macro... yes
+checking whether setusershell is declared without a macro... yes
+checking whether endusershell is declared without a macro... yes
+checking whether group_member is declared without a macro... yes
+checking whether isatty is declared without a macro... yes
+checking whether lchown is declared without a macro... yes
+checking whether link is declared without a macro... yes
+checking whether linkat is declared without a macro... yes
+checking whether lseek is declared without a macro... yes
+checking whether pipe is declared without a macro... yes
+checking whether pipe2 is declared without a macro... yes
+checking whether pread is declared without a macro... yes
+checking whether pwrite is declared without a macro... yes
+checking whether readlink is declared without a macro... yes
+checking whether readlinkat is declared without a macro... yes
+checking whether rmdir is declared without a macro... yes
+checking whether sethostname is declared without a macro... yes
+checking whether sleep is declared without a macro... yes
+checking whether symlink is declared without a macro... yes
+checking whether symlinkat is declared without a macro... yes
+checking whether ttyname_r is declared without a macro... yes
+checking whether unlink is declared without a macro... yes
+checking whether unlinkat is declared without a macro... yes
+checking whether usleep is declared without a macro... yes
+checking for unsetenv... yes
+checking for unsetenv() return type... int
+checking whether unsetenv obeys POSIX... yes
+checking for ptrdiff_t... yes
+checking for vasprintf... yes
+checking for vsnprintf... yes
+checking whether snprintf respects a size of 1... (cached) yes
+checking whether printf supports POSIX/XSI format strings with positions... (cached) yes
+checking whether btowc is declared without a macro... yes
+checking whether wctob is declared without a macro... yes
+checking whether mbsinit is declared without a macro... yes
+checking whether mbrtowc is declared without a macro... yes
+checking whether mbrlen is declared without a macro... yes
+checking whether mbsrtowcs is declared without a macro... yes
+checking whether mbsnrtowcs is declared without a macro... yes
+checking whether wcrtomb is declared without a macro... yes
+checking whether wcsrtombs is declared without a macro... yes
+checking whether wcsnrtombs is declared without a macro... yes
+checking whether wcwidth is declared without a macro... yes
+checking whether wmemchr is declared without a macro... yes
+checking whether wmemcmp is declared without a macro... yes
+checking whether wmemcpy is declared without a macro... yes
+checking whether wmemmove is declared without a macro... yes
+checking whether wmemset is declared without a macro... yes
+checking whether wcslen is declared without a macro... yes
+checking whether wcsnlen is declared without a macro... yes
+checking whether wcscpy is declared without a macro... yes
+checking whether wcpcpy is declared without a macro... yes
+checking whether wcsncpy is declared without a macro... yes
+checking whether wcpncpy is declared without a macro... yes
+checking whether wcscat is declared without a macro... yes
+checking whether wcsncat is declared without a macro... yes
+checking whether wcscmp is declared without a macro... yes
+checking whether wcsncmp is declared without a macro... yes
+checking whether wcscasecmp is declared without a macro... yes
+checking whether wcsncasecmp is declared without a macro... yes
+checking whether wcscoll is declared without a macro... yes
+checking whether wcsxfrm is declared without a macro... yes
+checking whether wcsdup is declared without a macro... yes
+checking whether wcschr is declared without a macro... yes
+checking whether wcsrchr is declared without a macro... yes
+checking whether wcscspn is declared without a macro... yes
+checking whether wcsspn is declared without a macro... yes
+checking whether wcspbrk is declared without a macro... yes
+checking whether wcsstr is declared without a macro... yes
+checking whether wcstok is declared without a macro... yes
+checking whether wcswidth is declared without a macro... yes
+checking whether mbrtowc handles incomplete characters... (cached) guessing yes
+checking whether mbrtowc works as well as mbtowc... (cached) guessing yes
+checking whether wcrtomb return value is correct... guessing yes
+checking whether iswcntrl works... yes
+checking for towlower... yes
+checking for wctype_t... yes
+checking for wctrans_t... yes
+checking whether wctype is declared without a macro... yes
+checking whether iswctype is declared without a macro... yes
+checking whether wctrans is declared without a macro... yes
+checking whether towctrans is declared without a macro... yes
+checking for stdint.h... (cached) yes
+configure: creating ./config.status
+config.status: creating gl/Makefile
+config.status: creating nagios-plugins.spec
+config.status: creating tools/build_perl_modules
+config.status: creating Makefile
+config.status: creating tap/Makefile
+config.status: creating lib/Makefile
+config.status: creating plugins/Makefile
+config.status: creating lib/tests/Makefile
+config.status: creating plugins-root/Makefile
+config.status: creating plugins-scripts/Makefile
+config.status: creating plugins-scripts/utils.pm
+config.status: creating plugins-scripts/utils.sh
+config.status: creating perlmods/Makefile
+config.status: creating test.pl
+config.status: creating pkg/solaris/pkginfo
+config.status: creating po/Makefile.in
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+            --with-apt-get-command: /usr/bin/apt-get
+              --with-ping6-command: /bin/ping6 -n -U -w %d -c %d %s
+               --with-ping-command: /bin/ping -n -U -w %d -c %d %s
+                       --with-ipv6: yes
+                      --with-mysql: no
+                    --with-openssl: yes
+                     --with-gnutls: no
+               --enable-extra-opts: yes
+                       --with-perl: /usr/bin/perl
+             --enable-perl-modules: no
+                     --with-cgiurl: /nagios/cgi-bin
+               --with-trusted-path: /usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+                   --enable-libtap: no
+configure: creating ./config.status
+config.status: creating gl/Makefile
+config.status: creating nagios-plugins.spec
+config.status: creating tools/build_perl_modules
+config.status: creating Makefile
+config.status: creating tap/Makefile
+config.status: creating lib/Makefile
+config.status: creating plugins/Makefile
+config.status: creating lib/tests/Makefile
+config.status: creating plugins-root/Makefile
+config.status: creating plugins-scripts/Makefile
+config.status: creating plugins-scripts/utils.pm
+config.status: creating plugins-scripts/utils.sh
+config.status: creating perlmods/Makefile
+config.status: creating test.pl
+config.status: creating pkg/solaris/pkginfo
+config.status: creating po/Makefile.in
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+
+real	0m53.408s
+user	0m11.312s
+sys	0m3.176s
+Making clean in po
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/po'
+rm -f remove-potcdate.sed
+rm -f stamp-poT
+rm -f core core.* nagios-plugins.po nagios-plugins.1po nagios-plugins.2po *.new.po
+rm -fr *.o
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/po'
+Making clean in plugins-root
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-root'
+rm -rf .libs _libs
+rm -f NP-VERSION-FILE
+ rm -f check_dhcp check_icmp
+rm -f *.o
+rm -f *.lo
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-root'
+Making clean in plugins-scripts
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-scripts'
+test -z "check_breeze check_disk_smb check_flexlm check_ircd check_log check_oracle check_rpc check_sensors check_wave check_ifstatus check_ifoperstatus check_mailq check_file_age utils.sh utils.pm" || rm -f check_breeze check_disk_smb check_flexlm check_ircd check_log check_oracle check_rpc check_sensors check_wave check_ifstatus check_ifoperstatus check_mailq check_file_age utils.sh utils.pm
+rm -rf .libs _libs
+rm -f NP-VERSION-FILE
+rm -f *.lo
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-scripts'
+Making clean in plugins
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins'
+ rm -f check_apt check_cluster check_disk check_dummy check_http check_load check_mrtg check_mrtgtraf check_ntp check_ntp_peer check_nwstat check_overcr check_ping check_real check_smtp check_ssh check_tcp check_time check_ntp_time check_ups check_users negate urlize check_ldap check_ide_smart check_uptime check_procs check_nagios check_dns check_by_ssh check_swap check_dig check_apt check_nt
+rm -rf .libs _libs
+rm -f check_ftp check_imap check_nntp check_pop check_udp check_clamd check_simap check_spop check_jabber check_nntps check_ssmtp
+rm -f NP-VERSION-FILE
+test -z "libnpcommon.a" || rm -f libnpcommon.a
+rm -f *.o
+rm -f *.lo
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins'
+Making clean in lib
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib'
+Making clean in tests
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib/tests'
+rm -rf .libs _libs
+rm -f *.o
+rm -f *.lo
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib/tests'
+Making clean in .
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib'
+rm -rf .libs _libs
+test -z "libnagiosplug.a" || rm -f libnagiosplug.a
+rm -f *.o
+rm -f *.lo
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib'
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib'
+Making clean in tap
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/tap'
+rm -rf .libs _libs
+test -z "" || rm -f 
+rm -f *.o
+rm -f *.lo
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/tap'
+Making clean in gl
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+Making clean in .
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+test -z "configmake.h configmake.h-t charset.alias ref-add.sed ref-del.sed" || rm -f configmake.h configmake.h-t charset.alias ref-add.sed ref-del.sed
+rm -rf .libs _libs
+test -z "libgnu.a" || rm -f libgnu.a
+test -z "" || rm -f 
+rm -f *.o
+rm -f glthread/lock.o
+rm -f glthread/threadlib.o
+test -z "core *.stackdump alloca.h alloca.h-t arpa/inet.h arpa/inet.h-t errno.h errno.h-t float.h float.h-t getopt.h getopt.h-t langinfo.h langinfo.h-t locale.h locale.h-t math.h math.h-t netdb.h netdb.h-t netinet/in.h netinet/in.h-t arg-nonnull.h arg-nonnull.h-t c++defs.h c++defs.h-t warn-on-use.h warn-on-use.h-t stdalign.h stdalign.h-t stdbool.h stdbool.h-t stddef.h stddef.h-t stdint.h stdint.h-t stdio.h stdio.h-t stdlib.h stdlib.h-t string.h string.h-t strings.h strings.h-t sys/socket.h sys/socket.h-t sys/types.h sys/types.h-t sys/uio.h sys/uio.h-t time.h time.h-t unistd.h unistd.h-t wchar.h wchar.h-t wctype.h wctype.h-t" || rm -f core *.stackdump alloca.h alloca.h-t arpa/inet.h arpa/inet.h-t errno.h errno.h-t float.h float.h-t getopt.h getopt.h-t langinfo.h langinfo.h-t locale.h locale.h-t math.h math.h-t netdb.h netdb.h-t netinet/in.h netinet/in.h-t arg-nonnull.h arg-nonnull.h-t c++defs.h c++defs.h-t warn-on-use.h warn-on-use.h-t stdalign.h stdalign.h-t stdbool.h stdbool.h-t stddef.h stddef.h-t stdint.h stdint.h-t stdio.h stdio.h-t stdlib.h stdlib.h-t string.h string.h-t strings.h strings.h-t sys/socket.h sys/socket.h-t sys/types.h sys/types.h-t sys/uio.h sys/uio.h-t time.h time.h-t unistd.h unistd.h-t wchar.h wchar.h-t wctype.h wctype.h-t
+rm -f *.lo
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+Making clean in .
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4'
+rm -rf .libs _libs
+rm -f *.lo
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4'
+
+real	0m0.136s
+user	0m0.052s
+sys	0m0.004s
+make  all-recursive
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4'
+Making all in gl
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+rm -f alloca.h-t alloca.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  cat ./alloca.in.h; \
+} > alloca.h-t && \
+mv -f alloca.h-t alloca.h
+rm -f c++defs.h-t c++defs.h && \
+sed -n -e '/_GL_CXXDEFS/,$p' \
+  < ../build-aux/snippet/c++defs.h \
+  > c++defs.h-t && \
+mv c++defs.h-t c++defs.h
+rm -f warn-on-use.h-t warn-on-use.h && \
+sed -n -e '/^.ifndef/,$p' \
+  < ../build-aux/snippet/warn-on-use.h \
+  > warn-on-use.h-t && \
+mv warn-on-use.h-t warn-on-use.h
+rm -f arg-nonnull.h-t arg-nonnull.h && \
+sed -n -e '/GL_ARG_NONNULL/,$p' \
+  < ../build-aux/snippet/arg-nonnull.h \
+  > arg-nonnull.h-t && \
+mv arg-nonnull.h-t arg-nonnull.h
+/bin/mkdir -p arpa
+rm -f arpa/inet.h-t arpa/inet.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''HAVE_FEATURES_H''@|1|g' \
+      -e 's|@''NEXT_ARPA_INET_H''@|<arpa/inet.h>|g' \
+      -e 's|@''HAVE_ARPA_INET_H''@|1|g' \
+      -e 's/@''GNULIB_INET_NTOP''@/1/g' \
+      -e 's/@''GNULIB_INET_PTON''@/0/g' \
+      -e 's|@''HAVE_DECL_INET_NTOP''@|1|g' \
+      -e 's|@''HAVE_DECL_INET_PTON''@|1|g' \
+      -e 's|@''REPLACE_INET_NTOP''@|0|g' \
+      -e 's|@''REPLACE_INET_PTON''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+      < ./arpa_inet.in.h; \
+} > arpa/inet.h-t && \
+mv arpa/inet.h-t arpa/inet.h
+rm -f configmake.h-t && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  echo '#define PREFIX "/usr/local/nagios"'; \
+  echo '#define EXEC_PREFIX "/usr/local/nagios"'; \
+  echo '#define BINDIR "/usr/local/nagios/bin"'; \
+  echo '#define SBINDIR "/usr/local/nagios/sbin"'; \
+  echo '#define LIBEXECDIR "/usr/local/nagios/libexec"'; \
+  echo '#define DATAROOTDIR "/usr/local/nagios/share"'; \
+  echo '#define DATADIR "/usr/local/nagios/share"'; \
+  echo '#define SYSCONFDIR "/usr/local/nagios/etc"'; \
+  echo '#define SHAREDSTATEDIR "/usr/local/nagios/com"'; \
+  echo '#define LOCALSTATEDIR "/usr/local/nagios/var"'; \
+  echo '#define INCLUDEDIR "/usr/local/nagios/include"'; \
+  echo '#define OLDINCLUDEDIR "/usr/include"'; \
+  echo '#define DOCDIR "/usr/local/nagios/share/doc/nagios-plugins"'; \
+  echo '#define INFODIR "/usr/local/nagios/share/info"'; \
+  echo '#define HTMLDIR "/usr/local/nagios/share/doc/nagios-plugins"'; \
+  echo '#define DVIDIR "/usr/local/nagios/share/doc/nagios-plugins"'; \
+  echo '#define PDFDIR "/usr/local/nagios/share/doc/nagios-plugins"'; \
+  echo '#define PSDIR "/usr/local/nagios/share/doc/nagios-plugins"'; \
+  echo '#define LIBDIR "/usr/local/nagios/lib"'; \
+  echo '#define LISPDIR "/usr/local/nagios/share/emacs/site-lisp"'; \
+  echo '#define LOCALEDIR "/usr/local/nagios/share/locale"'; \
+  echo '#define MANDIR "/usr/local/nagios/share/man"'; \
+  echo '#define MANEXT ""'; \
+  echo '#define PKGDATADIR "/usr/local/nagios/share/nagios-plugins"'; \
+  echo '#define PKGINCLUDEDIR "/usr/local/nagios/include/nagios-plugins"'; \
+  echo '#define PKGLIBDIR "/usr/local/nagios/lib/nagios-plugins"'; \
+  echo '#define PKGLIBEXECDIR "/usr/local/nagios/libexec/nagios-plugins"'; \
+} | sed '/""/d' > configmake.h-t && \
+mv -f configmake.h-t configmake.h
+rm -f langinfo.h-t langinfo.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_LANGINFO_H''@|1|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_LANGINFO_H''@|<langinfo.h>|g' \
+      -e 's/@''GNULIB_NL_LANGINFO''@/1/g' \
+      -e 's|@''HAVE_LANGINFO_CODESET''@|1|g' \
+      -e 's|@''HAVE_LANGINFO_T_FMT_AMPM''@|1|g' \
+      -e 's|@''HAVE_LANGINFO_ERA''@|1|g' \
+      -e 's|@''HAVE_LANGINFO_YESEXPR''@|1|g' \
+      -e 's|@''HAVE_NL_LANGINFO''@|1|g' \
+      -e 's|@''REPLACE_NL_LANGINFO''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+      < ./langinfo.in.h; \
+} > langinfo.h-t && \
+mv langinfo.h-t langinfo.h
+rm -f locale.h-t locale.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_LOCALE_H''@|<locale.h>|g' \
+      -e 's/@''GNULIB_LOCALECONV''@/1/g' \
+      -e 's/@''GNULIB_SETLOCALE''@/0/g' \
+      -e 's/@''GNULIB_DUPLOCALE''@/0/g' \
+      -e 's|@''HAVE_DUPLOCALE''@|1|g' \
+      -e 's|@''HAVE_XLOCALE_H''@|1|g' \
+      -e 's|@''REPLACE_LOCALECONV''@|0|g' \
+      -e 's|@''REPLACE_SETLOCALE''@|0|g' \
+      -e 's|@''REPLACE_DUPLOCALE''@|0|g' \
+      -e 's|@''REPLACE_STRUCT_LCONV''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+      < ./locale.in.h; \
+} > locale.h-t && \
+mv locale.h-t locale.h
+rm -f math.h-t math.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT_AS_FIRST_DIRECTIVE''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_AS_FIRST_DIRECTIVE_MATH_H''@|<math.h>|g' \
+      -e 's/@''GNULIB_ACOSF''@/0/g' \
+      -e 's/@''GNULIB_ACOSL''@/0/g' \
+      -e 's/@''GNULIB_ASINF''@/0/g' \
+      -e 's/@''GNULIB_ASINL''@/0/g' \
+      -e 's/@''GNULIB_ATANF''@/0/g' \
+      -e 's/@''GNULIB_ATANL''@/0/g' \
+      -e 's/@''GNULIB_ATAN2F''@/0/g' \
+      -e 's/@''GNULIB_CBRT''@/0/g' \
+      -e 's/@''GNULIB_CBRTF''@/0/g' \
+      -e 's/@''GNULIB_CBRTL''@/0/g' \
+      -e 's/@''GNULIB_CEIL''@/0/g' \
+      -e 's/@''GNULIB_CEILF''@/0/g' \
+      -e 's/@''GNULIB_CEILL''@/0/g' \
+      -e 's/@''GNULIB_COPYSIGN''@/0/g' \
+      -e 's/@''GNULIB_COPYSIGNF''@/0/g' \
+      -e 's/@''GNULIB_COPYSIGNL''@/0/g' \
+      -e 's/@''GNULIB_COSF''@/0/g' \
+      -e 's/@''GNULIB_COSL''@/0/g' \
+      -e 's/@''GNULIB_COSHF''@/0/g' \
+      -e 's/@''GNULIB_EXPF''@/0/g' \
+      -e 's/@''GNULIB_EXPL''@/0/g' \
+      -e 's/@''GNULIB_EXP2''@/0/g' \
+      -e 's/@''GNULIB_EXP2F''@/0/g' \
+      -e 's/@''GNULIB_EXP2L''@/0/g' \
+      -e 's/@''GNULIB_EXPM1''@/0/g' \
+      -e 's/@''GNULIB_EXPM1F''@/0/g' \
+      -e 's/@''GNULIB_EXPM1L''@/0/g' \
+      -e 's/@''GNULIB_FABSF''@/0/g' \
+      -e 's/@''GNULIB_FABSL''@/0/g' \
+      -e 's/@''GNULIB_FLOOR''@/0/g' \
+      -e 's/@''GNULIB_FLOORF''@/1/g' \
+      -e 's/@''GNULIB_FLOORL''@/0/g' \
+      -e 's/@''GNULIB_FMA''@/0/g' \
+      -e 's/@''GNULIB_FMAF''@/0/g' \
+      -e 's/@''GNULIB_FMAL''@/0/g' \
+      -e 's/@''GNULIB_FMOD''@/0/g' \
+      -e 's/@''GNULIB_FMODF''@/0/g' \
+      -e 's/@''GNULIB_FMODL''@/0/g' \
+      -e 's/@''GNULIB_FREXPF''@/0/g' \
+      -e 's/@''GNULIB_FREXP''@/0/g' \
+      -e 's/@''GNULIB_FREXPL''@/0/g' \
+      -e 's/@''GNULIB_HYPOT''@/0/g' \
+      -e 's/@''GNULIB_HYPOTF''@/0/g' \
+      -e 's/@''GNULIB_HYPOTL''@/0/g' \
+      < ./math.in.h | \
+  sed -e 's/@''GNULIB_ILOGB''@/0/g' \
+      -e 's/@''GNULIB_ILOGBF''@/0/g' \
+      -e 's/@''GNULIB_ILOGBL''@/0/g' \
+      -e 's/@''GNULIB_ISFINITE''@/0/g' \
+      -e 's/@''GNULIB_ISINF''@/0/g' \
+      -e 's/@''GNULIB_ISNAN''@/0/g' \
+      -e 's/@''GNULIB_ISNANF''@/0/g' \
+      -e 's/@''GNULIB_ISNAND''@/0/g' \
+      -e 's/@''GNULIB_ISNANL''@/0/g' \
+      -e 's/@''GNULIB_LDEXPF''@/0/g' \
+      -e 's/@''GNULIB_LDEXPL''@/0/g' \
+      -e 's/@''GNULIB_LOG''@/0/g' \
+      -e 's/@''GNULIB_LOGF''@/0/g' \
+      -e 's/@''GNULIB_LOGL''@/0/g' \
+      -e 's/@''GNULIB_LOG10''@/0/g' \
+      -e 's/@''GNULIB_LOG10F''@/0/g' \
+      -e 's/@''GNULIB_LOG10L''@/0/g' \
+      -e 's/@''GNULIB_LOG1P''@/0/g' \
+      -e 's/@''GNULIB_LOG1PF''@/0/g' \
+      -e 's/@''GNULIB_LOG1PL''@/0/g' \
+      -e 's/@''GNULIB_LOG2''@/0/g' \
+      -e 's/@''GNULIB_LOG2F''@/0/g' \
+      -e 's/@''GNULIB_LOG2L''@/0/g' \
+      -e 's/@''GNULIB_LOGB''@/0/g' \
+      -e 's/@''GNULIB_LOGBF''@/0/g' \
+      -e 's/@''GNULIB_LOGBL''@/0/g' \
+      -e 's/@''GNULIB_MODF''@/0/g' \
+      -e 's/@''GNULIB_MODFF''@/0/g' \
+      -e 's/@''GNULIB_MODFL''@/0/g' \
+      -e 's/@''GNULIB_POWF''@/0/g' \
+      -e 's/@''GNULIB_REMAINDER''@/0/g' \
+      -e 's/@''GNULIB_REMAINDERF''@/0/g' \
+      -e 's/@''GNULIB_REMAINDERL''@/0/g' \
+      -e 's/@''GNULIB_RINT''@/0/g' \
+      -e 's/@''GNULIB_RINTF''@/0/g' \
+      -e 's/@''GNULIB_RINTL''@/0/g' \
+      -e 's/@''GNULIB_ROUND''@/0/g' \
+      -e 's/@''GNULIB_ROUNDF''@/0/g' \
+      -e 's/@''GNULIB_ROUNDL''@/0/g' \
+      -e 's/@''GNULIB_SIGNBIT''@/0/g' \
+      -e 's/@''GNULIB_SINF''@/0/g' \
+      -e 's/@''GNULIB_SINL''@/0/g' \
+      -e 's/@''GNULIB_SINHF''@/0/g' \
+      -e 's/@''GNULIB_SQRTF''@/0/g' \
+      -e 's/@''GNULIB_SQRTL''@/0/g' \
+      -e 's/@''GNULIB_TANF''@/0/g' \
+      -e 's/@''GNULIB_TANL''@/0/g' \
+      -e 's/@''GNULIB_TANHF''@/0/g' \
+      -e 's/@''GNULIB_TRUNC''@/0/g' \
+      -e 's/@''GNULIB_TRUNCF''@/0/g' \
+      -e 's/@''GNULIB_TRUNCL''@/0/g' \
+  | \
+  sed -e 's|@''HAVE_ACOSF''@|1|g' \
+      -e 's|@''HAVE_ACOSL''@|1|g' \
+      -e 's|@''HAVE_ASINF''@|1|g' \
+      -e 's|@''HAVE_ASINL''@|1|g' \
+      -e 's|@''HAVE_ATANF''@|1|g' \
+      -e 's|@''HAVE_ATANL''@|1|g' \
+      -e 's|@''HAVE_ATAN2F''@|1|g' \
+      -e 's|@''HAVE_CBRT''@|1|g' \
+      -e 's|@''HAVE_CBRTF''@|1|g' \
+      -e 's|@''HAVE_CBRTL''@|1|g' \
+      -e 's|@''HAVE_COPYSIGN''@|1|g' \
+      -e 's|@''HAVE_COPYSIGNL''@|1|g' \
+      -e 's|@''HAVE_COSF''@|1|g' \
+      -e 's|@''HAVE_COSL''@|1|g' \
+      -e 's|@''HAVE_COSHF''@|1|g' \
+      -e 's|@''HAVE_EXPF''@|1|g' \
+      -e 's|@''HAVE_EXPL''@|1|g' \
+      -e 's|@''HAVE_EXPM1''@|1|g' \
+      -e 's|@''HAVE_EXPM1F''@|1|g' \
+      -e 's|@''HAVE_FABSF''@|1|g' \
+      -e 's|@''HAVE_FABSL''@|1|g' \
+      -e 's|@''HAVE_FMA''@|1|g' \
+      -e 's|@''HAVE_FMAF''@|1|g' \
+      -e 's|@''HAVE_FMAL''@|1|g' \
+      -e 's|@''HAVE_FMODF''@|1|g' \
+      -e 's|@''HAVE_FMODL''@|1|g' \
+      -e 's|@''HAVE_FREXPF''@|1|g' \
+      -e 's|@''HAVE_HYPOTF''@|1|g' \
+      -e 's|@''HAVE_HYPOTL''@|1|g' \
+      -e 's|@''HAVE_ILOGB''@|1|g' \
+      -e 's|@''HAVE_ILOGBF''@|1|g' \
+      -e 's|@''HAVE_ILOGBL''@|1|g' \
+      -e 's|@''HAVE_ISNANF''@|1|g' \
+      -e 's|@''HAVE_ISNAND''@|1|g' \
+      -e 's|@''HAVE_ISNANL''@|1|g' \
+      -e 's|@''HAVE_LDEXPF''@|1|g' \
+      -e 's|@''HAVE_LOGF''@|1|g' \
+      -e 's|@''HAVE_LOGL''@|1|g' \
+      -e 's|@''HAVE_LOG10F''@|1|g' \
+      -e 's|@''HAVE_LOG10L''@|1|g' \
+      -e 's|@''HAVE_LOG1P''@|1|g' \
+      -e 's|@''HAVE_LOG1PF''@|1|g' \
+      -e 's|@''HAVE_LOG1PL''@|1|g' \
+      -e 's|@''HAVE_LOGBF''@|1|g' \
+      -e 's|@''HAVE_LOGBL''@|1|g' \
+      -e 's|@''HAVE_MODFF''@|1|g' \
+      -e 's|@''HAVE_MODFL''@|1|g' \
+      -e 's|@''HAVE_POWF''@|1|g' \
+      -e 's|@''HAVE_REMAINDER''@|1|g' \
+      -e 's|@''HAVE_REMAINDERF''@|1|g' \
+      -e 's|@''HAVE_RINT''@|1|g' \
+      -e 's|@''HAVE_RINTL''@|1|g' \
+      -e 's|@''HAVE_SINF''@|1|g' \
+      -e 's|@''HAVE_SINL''@|1|g' \
+      -e 's|@''HAVE_SINHF''@|1|g' \
+      -e 's|@''HAVE_SQRTF''@|1|g' \
+      -e 's|@''HAVE_SQRTL''@|1|g' \
+      -e 's|@''HAVE_TANF''@|1|g' \
+      -e 's|@''HAVE_TANL''@|1|g' \
+      -e 's|@''HAVE_TANHF''@|1|g' \
+      -e 's|@''HAVE_DECL_ACOSL''@|1|g' \
+      -e 's|@''HAVE_DECL_ASINL''@|1|g' \
+      -e 's|@''HAVE_DECL_ATANL''@|1|g' \
+      -e 's|@''HAVE_DECL_CBRTF''@|1|g' \
+      -e 's|@''HAVE_DECL_CBRTL''@|1|g' \
+      -e 's|@''HAVE_DECL_CEILF''@|1|g' \
+      -e 's|@''HAVE_DECL_CEILL''@|1|g' \
+      -e 's|@''HAVE_DECL_COPYSIGNF''@|1|g' \
+      -e 's|@''HAVE_DECL_COSL''@|1|g' \
+      -e 's|@''HAVE_DECL_EXPL''@|1|g' \
+      -e 's|@''HAVE_DECL_EXP2''@|1|g' \
+      -e 's|@''HAVE_DECL_EXP2F''@|1|g' \
+      -e 's|@''HAVE_DECL_EXP2L''@|1|g' \
+      -e 's|@''HAVE_DECL_EXPM1L''@|1|g' \
+      -e 's|@''HAVE_DECL_FLOORF''@|1|g' \
+      -e 's|@''HAVE_DECL_FLOORL''@|1|g' \
+      -e 's|@''HAVE_DECL_FREXPL''@|1|g' \
+      -e 's|@''HAVE_DECL_LDEXPL''@|1|g' \
+      -e 's|@''HAVE_DECL_LOGL''@|1|g' \
+      -e 's|@''HAVE_DECL_LOG10L''@|1|g' \
+      -e 's|@''HAVE_DECL_LOG2''@|1|g' \
+      -e 's|@''HAVE_DECL_LOG2F''@|1|g' \
+      -e 's|@''HAVE_DECL_LOG2L''@|1|g' \
+      -e 's|@''HAVE_DECL_LOGB''@|1|g' \
+      -e 's|@''HAVE_DECL_REMAINDER''@|1|g' \
+      -e 's|@''HAVE_DECL_REMAINDERL''@|1|g' \
+      -e 's|@''HAVE_DECL_RINTF''@|1|g' \
+      -e 's|@''HAVE_DECL_ROUND''@|1|g' \
+      -e 's|@''HAVE_DECL_ROUNDF''@|1|g' \
+      -e 's|@''HAVE_DECL_ROUNDL''@|1|g' \
+      -e 's|@''HAVE_DECL_SINL''@|1|g' \
+      -e 's|@''HAVE_DECL_SQRTL''@|1|g' \
+      -e 's|@''HAVE_DECL_TANL''@|1|g' \
+      -e 's|@''HAVE_DECL_TRUNC''@|1|g' \
+      -e 's|@''HAVE_DECL_TRUNCF''@|1|g' \
+      -e 's|@''HAVE_DECL_TRUNCL''@|1|g' \
+  | \
+  sed -e 's|@''REPLACE_CBRTF''@|0|g' \
+      -e 's|@''REPLACE_CBRTL''@|0|g' \
+      -e 's|@''REPLACE_CEIL''@|0|g' \
+      -e 's|@''REPLACE_CEILF''@|0|g' \
+      -e 's|@''REPLACE_CEILL''@|0|g' \
+      -e 's|@''REPLACE_EXPM1''@|0|g' \
+      -e 's|@''REPLACE_EXPM1F''@|0|g' \
+      -e 's|@''REPLACE_EXP2''@|0|g' \
+      -e 's|@''REPLACE_EXP2L''@|0|g' \
+      -e 's|@''REPLACE_FABSL''@|0|g' \
+      -e 's|@''REPLACE_FLOOR''@|0|g' \
+      -e 's|@''REPLACE_FLOORF''@|0|g' \
+      -e 's|@''REPLACE_FLOORL''@|0|g' \
+      -e 's|@''REPLACE_FMA''@|0|g' \
+      -e 's|@''REPLACE_FMAF''@|0|g' \
+      -e 's|@''REPLACE_FMAL''@|0|g' \
+      -e 's|@''REPLACE_FMOD''@|0|g' \
+      -e 's|@''REPLACE_FMODF''@|0|g' \
+      -e 's|@''REPLACE_FMODL''@|0|g' \
+      -e 's|@''REPLACE_FREXPF''@|0|g' \
+      -e 's|@''REPLACE_FREXP''@|0|g' \
+      -e 's|@''REPLACE_FREXPL''@|0|g' \
+      -e 's|@''REPLACE_HUGE_VAL''@|0|g' \
+      -e 's|@''REPLACE_HYPOT''@|0|g' \
+      -e 's|@''REPLACE_HYPOTF''@|0|g' \
+      -e 's|@''REPLACE_HYPOTL''@|0|g' \
+      -e 's|@''REPLACE_ILOGB''@|0|g' \
+      -e 's|@''REPLACE_ILOGBF''@|0|g' \
+      -e 's|@''REPLACE_ISFINITE''@|0|g' \
+      -e 's|@''REPLACE_ISINF''@|0|g' \
+      -e 's|@''REPLACE_ISNAN''@|0|g' \
+      -e 's|@''REPLACE_ITOLD''@|0|g' \
+      -e 's|@''REPLACE_LDEXPL''@|0|g' \
+      -e 's|@''REPLACE_LOG''@|0|g' \
+      -e 's|@''REPLACE_LOGF''@|0|g' \
+      -e 's|@''REPLACE_LOGL''@|0|g' \
+      -e 's|@''REPLACE_LOG10''@|0|g' \
+      -e 's|@''REPLACE_LOG10F''@|0|g' \
+      -e 's|@''REPLACE_LOG10L''@|0|g' \
+      -e 's|@''REPLACE_LOG1P''@|0|g' \
+      -e 's|@''REPLACE_LOG1PF''@|0|g' \
+      -e 's|@''REPLACE_LOG1PL''@|0|g' \
+      -e 's|@''REPLACE_LOG2''@|0|g' \
+      -e 's|@''REPLACE_LOG2F''@|0|g' \
+      -e 's|@''REPLACE_LOG2L''@|0|g' \
+      -e 's|@''REPLACE_LOGB''@|0|g' \
+      -e 's|@''REPLACE_LOGBF''@|0|g' \
+      -e 's|@''REPLACE_LOGBL''@|0|g' \
+      -e 's|@''REPLACE_MODF''@|0|g' \
+      -e 's|@''REPLACE_MODFF''@|0|g' \
+      -e 's|@''REPLACE_MODFL''@|0|g' \
+      -e 's|@''REPLACE_NAN''@|0|g' \
+      -e 's|@''REPLACE_REMAINDER''@|0|g' \
+      -e 's|@''REPLACE_REMAINDERF''@|0|g' \
+      -e 's|@''REPLACE_REMAINDERL''@|0|g' \
+      -e 's|@''REPLACE_ROUND''@|0|g' \
+      -e 's|@''REPLACE_ROUNDF''@|0|g' \
+      -e 's|@''REPLACE_ROUNDL''@|0|g' \
+      -e 's|@''REPLACE_SIGNBIT''@|0|g' \
+      -e 's|@''REPLACE_SIGNBIT_USING_GCC''@|0|g' \
+      -e 's|@''REPLACE_SQRTL''@|0|g' \
+      -e 's|@''REPLACE_TRUNC''@|0|g' \
+      -e 's|@''REPLACE_TRUNCF''@|0|g' \
+      -e 's|@''REPLACE_TRUNCL''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'; \
+} > math.h-t && \
+mv math.h-t math.h
+rm -f netdb.h-t netdb.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_NETDB_H''@|<netdb.h>|g' \
+      -e 's|@''HAVE_NETDB_H''@|1|g' \
+      -e 's/@''GNULIB_GETADDRINFO''@/1/g' \
+      -e 's|@''HAVE_STRUCT_ADDRINFO''@|1|g' \
+      -e 's|@''HAVE_DECL_FREEADDRINFO''@|1|g' \
+      -e 's|@''HAVE_DECL_GAI_STRERROR''@|1|g' \
+      -e 's|@''HAVE_DECL_GETADDRINFO''@|1|g' \
+      -e 's|@''HAVE_DECL_GETNAMEINFO''@|1|g' \
+      -e 's|@''REPLACE_GAI_STRERROR''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+      < ./netdb.in.h; \
+} > netdb.h-t && \
+mv netdb.h-t netdb.h
+rm -f stdio.h-t stdio.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STDIO_H''@|<stdio.h>|g' \
+      -e 's/@''GNULIB_DPRINTF''@/0/g' \
+      -e 's/@''GNULIB_FCLOSE''@/0/g' \
+      -e 's/@''GNULIB_FDOPEN''@/0/g' \
+      -e 's/@''GNULIB_FFLUSH''@/0/g' \
+      -e 's/@''GNULIB_FGETC''@/1/g' \
+      -e 's/@''GNULIB_FGETS''@/1/g' \
+      -e 's/@''GNULIB_FOPEN''@/0/g' \
+      -e 's/@''GNULIB_FPRINTF''@/1/g' \
+      -e 's/@''GNULIB_FPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_FPURGE''@/0/g' \
+      -e 's/@''GNULIB_FPUTC''@/1/g' \
+      -e 's/@''GNULIB_FPUTS''@/1/g' \
+      -e 's/@''GNULIB_FREAD''@/1/g' \
+      -e 's/@''GNULIB_FREOPEN''@/0/g' \
+      -e 's/@''GNULIB_FSCANF''@/1/g' \
+      -e 's/@''GNULIB_FSEEK''@/0/g' \
+      -e 's/@''GNULIB_FSEEKO''@/0/g' \
+      -e 's/@''GNULIB_FTELL''@/0/g' \
+      -e 's/@''GNULIB_FTELLO''@/0/g' \
+      -e 's/@''GNULIB_FWRITE''@/1/g' \
+      -e 's/@''GNULIB_GETC''@/1/g' \
+      -e 's/@''GNULIB_GETCHAR''@/1/g' \
+      -e 's/@''GNULIB_GETDELIM''@/0/g' \
+      -e 's/@''GNULIB_GETLINE''@/0/g' \
+      -e 's/@''GNULIB_OBSTACK_PRINTF''@/0/g' \
+      -e 's/@''GNULIB_OBSTACK_PRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_PCLOSE''@/0/g' \
+      -e 's/@''GNULIB_PERROR''@/0/g' \
+      -e 's/@''GNULIB_POPEN''@/0/g' \
+      -e 's/@''GNULIB_PRINTF''@/1/g' \
+      -e 's/@''GNULIB_PRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_PUTC''@/1/g' \
+      -e 's/@''GNULIB_PUTCHAR''@/1/g' \
+      -e 's/@''GNULIB_PUTS''@/1/g' \
+      -e 's/@''GNULIB_REMOVE''@/0/g' \
+      -e 's/@''GNULIB_RENAME''@/0/g' \
+      -e 's/@''GNULIB_RENAMEAT''@/0/g' \
+      -e 's/@''GNULIB_SCANF''@/1/g' \
+      -e 's/@''GNULIB_SNPRINTF''@/1/g' \
+      -e 's/@''GNULIB_SPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_STDIO_H_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_STDIO_H_SIGPIPE''@/0/g' \
+      -e 's/@''GNULIB_TMPFILE''@/0/g' \
+      -e 's/@''GNULIB_VASPRINTF''@/1/g' \
+      -e 's/@''GNULIB_VDPRINTF''@/0/g' \
+      -e 's/@''GNULIB_VFPRINTF''@/1/g' \
+      -e 's/@''GNULIB_VFPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_VFSCANF''@/0/g' \
+      -e 's/@''GNULIB_VSCANF''@/0/g' \
+      -e 's/@''GNULIB_VPRINTF''@/1/g' \
+      -e 's/@''GNULIB_VPRINTF_POSIX''@/0/g' \
+      -e 's/@''GNULIB_VSNPRINTF''@/1/g' \
+      -e 's/@''GNULIB_VSPRINTF_POSIX''@/0/g' \
+      < ./stdio.in.h | \
+  sed -e 's|@''HAVE_DECL_FPURGE''@|1|g' \
+      -e 's|@''HAVE_DECL_FSEEKO''@|1|g' \
+      -e 's|@''HAVE_DECL_FTELLO''@|1|g' \
+      -e 's|@''HAVE_DECL_GETDELIM''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLINE''@|1|g' \
+      -e 's|@''HAVE_DECL_OBSTACK_PRINTF''@|1|g' \
+      -e 's|@''HAVE_DECL_SNPRINTF''@|1|g' \
+      -e 's|@''HAVE_DECL_VSNPRINTF''@|1|g' \
+      -e 's|@''HAVE_DPRINTF''@|1|g' \
+      -e 's|@''HAVE_FSEEKO''@|1|g' \
+      -e 's|@''HAVE_FTELLO''@|1|g' \
+      -e 's|@''HAVE_PCLOSE''@|1|g' \
+      -e 's|@''HAVE_POPEN''@|1|g' \
+      -e 's|@''HAVE_RENAMEAT''@|1|g' \
+      -e 's|@''HAVE_VASPRINTF''@|1|g' \
+      -e 's|@''HAVE_VDPRINTF''@|1|g' \
+      -e 's|@''REPLACE_DPRINTF''@|0|g' \
+      -e 's|@''REPLACE_FCLOSE''@|0|g' \
+      -e 's|@''REPLACE_FDOPEN''@|0|g' \
+      -e 's|@''REPLACE_FFLUSH''@|0|g' \
+      -e 's|@''REPLACE_FOPEN''@|0|g' \
+      -e 's|@''REPLACE_FPRINTF''@|0|g' \
+      -e 's|@''REPLACE_FPURGE''@|0|g' \
+      -e 's|@''REPLACE_FREOPEN''@|0|g' \
+      -e 's|@''REPLACE_FSEEK''@|0|g' \
+      -e 's|@''REPLACE_FSEEKO''@|0|g' \
+      -e 's|@''REPLACE_FTELL''@|0|g' \
+      -e 's|@''REPLACE_FTELLO''@|0|g' \
+      -e 's|@''REPLACE_GETDELIM''@|0|g' \
+      -e 's|@''REPLACE_GETLINE''@|0|g' \
+      -e 's|@''REPLACE_OBSTACK_PRINTF''@|0|g' \
+      -e 's|@''REPLACE_PERROR''@|0|g' \
+      -e 's|@''REPLACE_POPEN''@|0|g' \
+      -e 's|@''REPLACE_PRINTF''@|0|g' \
+      -e 's|@''REPLACE_REMOVE''@|0|g' \
+      -e 's|@''REPLACE_RENAME''@|0|g' \
+      -e 's|@''REPLACE_RENAMEAT''@|0|g' \
+      -e 's|@''REPLACE_SNPRINTF''@|0|g' \
+      -e 's|@''REPLACE_SPRINTF''@|0|g' \
+      -e 's|@''REPLACE_STDIO_READ_FUNCS''@|0|g' \
+      -e 's|@''REPLACE_STDIO_WRITE_FUNCS''@|0|g' \
+      -e 's|@''REPLACE_TMPFILE''@|0|g' \
+      -e 's|@''REPLACE_VASPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VDPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VFPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VSNPRINTF''@|0|g' \
+      -e 's|@''REPLACE_VSPRINTF''@|0|g' \
+      -e 's|@''ASM_SYMBOL_PREFIX''@||g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'; \
+} > stdio.h-t && \
+mv stdio.h-t stdio.h
+rm -f stdlib.h-t stdlib.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STDLIB_H''@|<stdlib.h>|g' \
+      -e 's/@''GNULIB__EXIT''@/0/g' \
+      -e 's/@''GNULIB_ATOLL''@/0/g' \
+      -e 's/@''GNULIB_CALLOC_POSIX''@/0/g' \
+      -e 's/@''GNULIB_CANONICALIZE_FILE_NAME''@/0/g' \
+      -e 's/@''GNULIB_GETLOADAVG''@/1/g' \
+      -e 's/@''GNULIB_GETSUBOPT''@/0/g' \
+      -e 's/@''GNULIB_GRANTPT''@/0/g' \
+      -e 's/@''GNULIB_MALLOC_POSIX''@/1/g' \
+      -e 's/@''GNULIB_MBTOWC''@/1/g' \
+      -e 's/@''GNULIB_MKDTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKOSTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKOSTEMPS''@/0/g' \
+      -e 's/@''GNULIB_MKSTEMP''@/0/g' \
+      -e 's/@''GNULIB_MKSTEMPS''@/0/g' \
+      -e 's/@''GNULIB_POSIX_OPENPT''@/0/g' \
+      -e 's/@''GNULIB_PTSNAME''@/0/g' \
+      -e 's/@''GNULIB_PTSNAME_R''@/0/g' \
+      -e 's/@''GNULIB_PUTENV''@/0/g' \
+      -e 's/@''GNULIB_RANDOM''@/0/g' \
+      -e 's/@''GNULIB_RANDOM_R''@/0/g' \
+      -e 's/@''GNULIB_REALLOC_POSIX''@/0/g' \
+      -e 's/@''GNULIB_REALPATH''@/0/g' \
+      -e 's/@''GNULIB_RPMATCH''@/0/g' \
+      -e 's/@''GNULIB_SECURE_GETENV''@/0/g' \
+      -e 's/@''GNULIB_SETENV''@/1/g' \
+      -e 's/@''GNULIB_STRTOD''@/0/g' \
+      -e 's/@''GNULIB_STRTOLL''@/0/g' \
+      -e 's/@''GNULIB_STRTOULL''@/0/g' \
+      -e 's/@''GNULIB_SYSTEM_POSIX''@/0/g' \
+      -e 's/@''GNULIB_UNLOCKPT''@/0/g' \
+      -e 's/@''GNULIB_UNSETENV''@/1/g' \
+      -e 's/@''GNULIB_WCTOMB''@/0/g' \
+      < ./stdlib.in.h | \
+  sed -e 's|@''HAVE__EXIT''@|1|g' \
+      -e 's|@''HAVE_ATOLL''@|1|g' \
+      -e 's|@''HAVE_CANONICALIZE_FILE_NAME''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOADAVG''@|1|g' \
+      -e 's|@''HAVE_GETSUBOPT''@|1|g' \
+      -e 's|@''HAVE_GRANTPT''@|1|g' \
+      -e 's|@''HAVE_MKDTEMP''@|1|g' \
+      -e 's|@''HAVE_MKOSTEMP''@|1|g' \
+      -e 's|@''HAVE_MKOSTEMPS''@|1|g' \
+      -e 's|@''HAVE_MKSTEMP''@|1|g' \
+      -e 's|@''HAVE_MKSTEMPS''@|1|g' \
+      -e 's|@''HAVE_POSIX_OPENPT''@|1|g' \
+      -e 's|@''HAVE_PTSNAME''@|1|g' \
+      -e 's|@''HAVE_PTSNAME_R''@|1|g' \
+      -e 's|@''HAVE_RANDOM''@|1|g' \
+      -e 's|@''HAVE_RANDOM_H''@|1|g' \
+      -e 's|@''HAVE_RANDOM_R''@|1|g' \
+      -e 's|@''HAVE_REALPATH''@|1|g' \
+      -e 's|@''HAVE_RPMATCH''@|1|g' \
+      -e 's|@''HAVE_SECURE_GETENV''@|1|g' \
+      -e 's|@''HAVE_DECL_SETENV''@|1|g' \
+      -e 's|@''HAVE_STRTOD''@|1|g' \
+      -e 's|@''HAVE_STRTOLL''@|1|g' \
+      -e 's|@''HAVE_STRTOULL''@|1|g' \
+      -e 's|@''HAVE_STRUCT_RANDOM_DATA''@|1|g' \
+      -e 's|@''HAVE_SYS_LOADAVG_H''@|0|g' \
+      -e 's|@''HAVE_UNLOCKPT''@|1|g' \
+      -e 's|@''HAVE_DECL_UNSETENV''@|1|g' \
+      -e 's|@''REPLACE_CALLOC''@|0|g' \
+      -e 's|@''REPLACE_CANONICALIZE_FILE_NAME''@|0|g' \
+      -e 's|@''REPLACE_MALLOC''@|0|g' \
+      -e 's|@''REPLACE_MBTOWC''@|0|g' \
+      -e 's|@''REPLACE_MKSTEMP''@|0|g' \
+      -e 's|@''REPLACE_PTSNAME''@|0|g' \
+      -e 's|@''REPLACE_PTSNAME_R''@|0|g' \
+      -e 's|@''REPLACE_PUTENV''@|0|g' \
+      -e 's|@''REPLACE_RANDOM_R''@|0|g' \
+      -e 's|@''REPLACE_REALLOC''@|0|g' \
+      -e 's|@''REPLACE_REALPATH''@|0|g' \
+      -e 's|@''REPLACE_SETENV''@|0|g' \
+      -e 's|@''REPLACE_STRTOD''@|0|g' \
+      -e 's|@''REPLACE_UNSETENV''@|0|g' \
+      -e 's|@''REPLACE_WCTOMB''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _Noreturn/r ../build-aux/snippet/_Noreturn.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'; \
+} > stdlib.h-t && \
+mv stdlib.h-t stdlib.h
+rm -f string.h-t string.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STRING_H''@|<string.h>|g' \
+      -e 's/@''GNULIB_FFSL''@/0/g' \
+      -e 's/@''GNULIB_FFSLL''@/0/g' \
+      -e 's/@''GNULIB_MBSLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSNLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSCHR''@/0/g' \
+      -e 's/@''GNULIB_MBSRCHR''@/0/g' \
+      -e 's/@''GNULIB_MBSSTR''@/0/g' \
+      -e 's/@''GNULIB_MBSCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSNCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSPCASECMP''@/0/g' \
+      -e 's/@''GNULIB_MBSCASESTR''@/0/g' \
+      -e 's/@''GNULIB_MBSCSPN''@/0/g' \
+      -e 's/@''GNULIB_MBSPBRK''@/0/g' \
+      -e 's/@''GNULIB_MBSSPN''@/0/g' \
+      -e 's/@''GNULIB_MBSSEP''@/0/g' \
+      -e 's/@''GNULIB_MBSTOK_R''@/0/g' \
+      -e 's/@''GNULIB_MEMCHR''@/1/g' \
+      -e 's/@''GNULIB_MEMMEM''@/0/g' \
+      -e 's/@''GNULIB_MEMPCPY''@/0/g' \
+      -e 's/@''GNULIB_MEMRCHR''@/0/g' \
+      -e 's/@''GNULIB_RAWMEMCHR''@/0/g' \
+      -e 's/@''GNULIB_STPCPY''@/0/g' \
+      -e 's/@''GNULIB_STPNCPY''@/0/g' \
+      -e 's/@''GNULIB_STRCHRNUL''@/0/g' \
+      -e 's/@''GNULIB_STRDUP''@/0/g' \
+      -e 's/@''GNULIB_STRNCAT''@/0/g' \
+      -e 's/@''GNULIB_STRNDUP''@/1/g' \
+      -e 's/@''GNULIB_STRNLEN''@/1/g' \
+      -e 's/@''GNULIB_STRPBRK''@/0/g' \
+      -e 's/@''GNULIB_STRSEP''@/1/g' \
+      -e 's/@''GNULIB_STRSTR''@/1/g' \
+      -e 's/@''GNULIB_STRCASESTR''@/1/g' \
+      -e 's/@''GNULIB_STRTOK_R''@/0/g' \
+      -e 's/@''GNULIB_STRERROR''@/1/g' \
+      -e 's/@''GNULIB_STRERROR_R''@/0/g' \
+      -e 's/@''GNULIB_STRSIGNAL''@/0/g' \
+      -e 's/@''GNULIB_STRVERSCMP''@/0/g' \
+      < ./string.in.h | \
+  sed -e 's|@''HAVE_FFSL''@|1|g' \
+      -e 's|@''HAVE_FFSLL''@|1|g' \
+      -e 's|@''HAVE_MBSLEN''@|0|g' \
+      -e 's|@''HAVE_MEMCHR''@|1|g' \
+      -e 's|@''HAVE_DECL_MEMMEM''@|1|g' \
+      -e 's|@''HAVE_MEMPCPY''@|1|g' \
+      -e 's|@''HAVE_DECL_MEMRCHR''@|1|g' \
+      -e 's|@''HAVE_RAWMEMCHR''@|1|g' \
+      -e 's|@''HAVE_STPCPY''@|1|g' \
+      -e 's|@''HAVE_STPNCPY''@|1|g' \
+      -e 's|@''HAVE_STRCHRNUL''@|1|g' \
+      -e 's|@''HAVE_DECL_STRDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRNDUP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRNLEN''@|1|g' \
+      -e 's|@''HAVE_STRPBRK''@|1|g' \
+      -e 's|@''HAVE_STRSEP''@|1|g' \
+      -e 's|@''HAVE_STRCASESTR''@|1|g' \
+      -e 's|@''HAVE_DECL_STRTOK_R''@|1|g' \
+      -e 's|@''HAVE_DECL_STRERROR_R''@|1|g' \
+      -e 's|@''HAVE_DECL_STRSIGNAL''@|1|g' \
+      -e 's|@''HAVE_STRVERSCMP''@|1|g' \
+      -e 's|@''REPLACE_STPNCPY''@|0|g' \
+      -e 's|@''REPLACE_MEMCHR''@|0|g' \
+      -e 's|@''REPLACE_MEMMEM''@|0|g' \
+      -e 's|@''REPLACE_STRCASESTR''@|0|g' \
+      -e 's|@''REPLACE_STRCHRNUL''@|0|g' \
+      -e 's|@''REPLACE_STRDUP''@|0|g' \
+      -e 's|@''REPLACE_STRSTR''@|0|g' \
+      -e 's|@''REPLACE_STRERROR''@|0|g' \
+      -e 's|@''REPLACE_STRERROR_R''@|0|g' \
+      -e 's|@''REPLACE_STRNCAT''@|0|g' \
+      -e 's|@''REPLACE_STRNDUP''@|0|g' \
+      -e 's|@''REPLACE_STRNLEN''@|0|g' \
+      -e 's|@''REPLACE_STRSIGNAL''@|0|g' \
+      -e 's|@''REPLACE_STRTOK_R''@|0|g' \
+      -e 's|@''UNDEFINE_STRTOK_R''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'; \
+      < ./string.in.h; \
+} > string.h-t && \
+mv string.h-t string.h
+rm -f strings.h-t strings.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_STRINGS_H''@|1|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_STRINGS_H''@|<strings.h>|g' \
+      -e 's|@''GNULIB_FFS''@|0|g' \
+      -e 's|@''HAVE_FFS''@|1|g' \
+      -e 's|@''HAVE_STRCASECMP''@|1|g' \
+      -e 's|@''HAVE_DECL_STRNCASECMP''@|1|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+      < ./strings.in.h; \
+} > strings.h-t && \
+mv strings.h-t strings.h
+/bin/mkdir -p sys
+rm -f sys/socket.h-t sys/socket.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_SOCKET_H''@|<sys/socket.h>|g' \
+      -e 's|@''HAVE_SYS_SOCKET_H''@|1|g' \
+      -e 's/@''GNULIB_CLOSE''@/0/g' \
+      -e 's/@''GNULIB_SOCKET''@/0/g' \
+      -e 's/@''GNULIB_CONNECT''@/0/g' \
+      -e 's/@''GNULIB_ACCEPT''@/0/g' \
+      -e 's/@''GNULIB_BIND''@/0/g' \
+      -e 's/@''GNULIB_GETPEERNAME''@/0/g' \
+      -e 's/@''GNULIB_GETSOCKNAME''@/0/g' \
+      -e 's/@''GNULIB_GETSOCKOPT''@/0/g' \
+      -e 's/@''GNULIB_LISTEN''@/0/g' \
+      -e 's/@''GNULIB_RECV''@/0/g' \
+      -e 's/@''GNULIB_SEND''@/0/g' \
+      -e 's/@''GNULIB_RECVFROM''@/0/g' \
+      -e 's/@''GNULIB_SENDTO''@/0/g' \
+      -e 's/@''GNULIB_SETSOCKOPT''@/0/g' \
+      -e 's/@''GNULIB_SHUTDOWN''@/0/g' \
+      -e 's/@''GNULIB_ACCEPT4''@/0/g' \
+      -e 's|@''HAVE_WINSOCK2_H''@|0|g' \
+      -e 's|@''HAVE_WS2TCPIP_H''@|0|g' \
+      -e 's|@''HAVE_STRUCT_SOCKADDR_STORAGE''@|1|g' \
+      -e 's|@''HAVE_STRUCT_SOCKADDR_STORAGE_SS_FAMILY''@|1|g' \
+      -e 's|@''HAVE_SA_FAMILY_T''@|1|g' \
+      -e 's|@''HAVE_ACCEPT4''@|1|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+      < ./sys_socket.in.h; \
+} > sys/socket.h-t && \
+mv -f sys/socket.h-t sys/socket.h
+/bin/mkdir -p sys
+rm -f sys/types.h-t sys/types.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_TYPES_H''@|<sys/types.h>|g' \
+      -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g' \
+      < ./sys_types.in.h; \
+} > sys/types.h-t && \
+mv sys/types.h-t sys/types.h
+/bin/mkdir -p sys
+rm -f sys/uio.h-t sys/uio.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_SYS_UIO_H''@|<sys/uio.h>|g' \
+      -e 's|@''HAVE_SYS_UIO_H''@|1|g' \
+      < ./sys_uio.in.h; \
+} > sys/uio.h-t && \
+mv -f sys/uio.h-t sys/uio.h
+rm -f time.h-t time.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */' && \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_TIME_H''@|<time.h>|g' \
+      -e 's/@''GNULIB_MKTIME''@/1/g' \
+      -e 's/@''GNULIB_NANOSLEEP''@/0/g' \
+      -e 's/@''GNULIB_STRPTIME''@/0/g' \
+      -e 's/@''GNULIB_TIMEGM''@/1/g' \
+      -e 's/@''GNULIB_TIME_R''@/1/g' \
+      -e 's|@''HAVE_DECL_LOCALTIME_R''@|1|g' \
+      -e 's|@''HAVE_NANOSLEEP''@|1|g' \
+      -e 's|@''HAVE_STRPTIME''@|1|g' \
+      -e 's|@''HAVE_TIMEGM''@|1|g' \
+      -e 's|@''REPLACE_LOCALTIME_R''@|0|g' \
+      -e 's|@''REPLACE_MKTIME''@|1|g' \
+      -e 's|@''REPLACE_NANOSLEEP''@|GNULIB_PORTCHECK|g' \
+      -e 's|@''REPLACE_TIMEGM''@|0|g' \
+      -e 's|@''PTHREAD_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+      -e 's|@''SYS_TIME_H_DEFINES_STRUCT_TIMESPEC''@|0|g' \
+      -e 's|@''TIME_H_DEFINES_STRUCT_TIMESPEC''@|1|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+      < ./time.in.h; \
+} > time.h-t && \
+mv time.h-t time.h
+rm -f unistd.h-t unistd.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''HAVE_UNISTD_H''@|1|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_UNISTD_H''@|<unistd.h>|g' \
+      -e 's|@''WINDOWS_64_BIT_OFF_T''@|0|g' \
+      -e 's/@''GNULIB_CHDIR''@/0/g' \
+      -e 's/@''GNULIB_CHOWN''@/0/g' \
+      -e 's/@''GNULIB_CLOSE''@/0/g' \
+      -e 's/@''GNULIB_DUP''@/0/g' \
+      -e 's/@''GNULIB_DUP2''@/0/g' \
+      -e 's/@''GNULIB_DUP3''@/0/g' \
+      -e 's/@''GNULIB_ENVIRON''@/1/g' \
+      -e 's/@''GNULIB_EUIDACCESS''@/0/g' \
+      -e 's/@''GNULIB_FACCESSAT''@/0/g' \
+      -e 's/@''GNULIB_FCHDIR''@/0/g' \
+      -e 's/@''GNULIB_FCHOWNAT''@/0/g' \
+      -e 's/@''GNULIB_FDATASYNC''@/0/g' \
+      -e 's/@''GNULIB_FSYNC''@/0/g' \
+      -e 's/@''GNULIB_FTRUNCATE''@/0/g' \
+      -e 's/@''GNULIB_GETCWD''@/0/g' \
+      -e 's/@''GNULIB_GETDOMAINNAME''@/0/g' \
+      -e 's/@''GNULIB_GETDTABLESIZE''@/0/g' \
+      -e 's/@''GNULIB_GETGROUPS''@/0/g' \
+      -e 's/@''GNULIB_GETHOSTNAME''@/1/g' \
+      -e 's/@''GNULIB_GETLOGIN''@/0/g' \
+      -e 's/@''GNULIB_GETLOGIN_R''@/0/g' \
+      -e 's/@''GNULIB_GETPAGESIZE''@/0/g' \
+      -e 's/@''GNULIB_GETUSERSHELL''@/0/g' \
+      -e 's/@''GNULIB_GROUP_MEMBER''@/0/g' \
+      -e 's/@''GNULIB_ISATTY''@/0/g' \
+      -e 's/@''GNULIB_LCHOWN''@/0/g' \
+      -e 's/@''GNULIB_LINK''@/0/g' \
+      -e 's/@''GNULIB_LINKAT''@/0/g' \
+      -e 's/@''GNULIB_LSEEK''@/0/g' \
+      -e 's/@''GNULIB_PIPE''@/0/g' \
+      -e 's/@''GNULIB_PIPE2''@/0/g' \
+      -e 's/@''GNULIB_PREAD''@/0/g' \
+      -e 's/@''GNULIB_PWRITE''@/0/g' \
+      -e 's/@''GNULIB_READ''@/1/g' \
+      -e 's/@''GNULIB_READLINK''@/0/g' \
+      -e 's/@''GNULIB_READLINKAT''@/0/g' \
+      -e 's/@''GNULIB_RMDIR''@/0/g' \
+      -e 's/@''GNULIB_SETHOSTNAME''@/0/g' \
+      -e 's/@''GNULIB_SLEEP''@/0/g' \
+      -e 's/@''GNULIB_SYMLINK''@/0/g' \
+      -e 's/@''GNULIB_SYMLINKAT''@/0/g' \
+      -e 's/@''GNULIB_TTYNAME_R''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_GETOPT''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_NONBLOCKING''@/0/g' \
+      -e 's/@''GNULIB_UNISTD_H_SIGPIPE''@/0/g' \
+      -e 's/@''GNULIB_UNLINK''@/0/g' \
+      -e 's/@''GNULIB_UNLINKAT''@/0/g' \
+      -e 's/@''GNULIB_USLEEP''@/0/g' \
+      -e 's/@''GNULIB_WRITE''@/0/g' \
+      < ./unistd.in.h | \
+  sed -e 's|@''HAVE_CHOWN''@|1|g' \
+      -e 's|@''HAVE_DUP2''@|1|g' \
+      -e 's|@''HAVE_DUP3''@|1|g' \
+      -e 's|@''HAVE_EUIDACCESS''@|1|g' \
+      -e 's|@''HAVE_FACCESSAT''@|1|g' \
+      -e 's|@''HAVE_FCHDIR''@|1|g' \
+      -e 's|@''HAVE_FCHOWNAT''@|1|g' \
+      -e 's|@''HAVE_FDATASYNC''@|1|g' \
+      -e 's|@''HAVE_FSYNC''@|1|g' \
+      -e 's|@''HAVE_FTRUNCATE''@|1|g' \
+      -e 's|@''HAVE_GETDTABLESIZE''@|1|g' \
+      -e 's|@''HAVE_GETGROUPS''@|1|g' \
+      -e 's|@''HAVE_GETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_GETLOGIN''@|1|g' \
+      -e 's|@''HAVE_GETPAGESIZE''@|1|g' \
+      -e 's|@''HAVE_GROUP_MEMBER''@|1|g' \
+      -e 's|@''HAVE_LCHOWN''@|1|g' \
+      -e 's|@''HAVE_LINK''@|1|g' \
+      -e 's|@''HAVE_LINKAT''@|1|g' \
+      -e 's|@''HAVE_PIPE''@|1|g' \
+      -e 's|@''HAVE_PIPE2''@|1|g' \
+      -e 's|@''HAVE_PREAD''@|1|g' \
+      -e 's|@''HAVE_PWRITE''@|1|g' \
+      -e 's|@''HAVE_READLINK''@|1|g' \
+      -e 's|@''HAVE_READLINKAT''@|1|g' \
+      -e 's|@''HAVE_SETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_SLEEP''@|1|g' \
+      -e 's|@''HAVE_SYMLINK''@|1|g' \
+      -e 's|@''HAVE_SYMLINKAT''@|1|g' \
+      -e 's|@''HAVE_UNLINKAT''@|1|g' \
+      -e 's|@''HAVE_USLEEP''@|1|g' \
+      -e 's|@''HAVE_DECL_ENVIRON''@|1|g' \
+      -e 's|@''HAVE_DECL_FCHDIR''@|1|g' \
+      -e 's|@''HAVE_DECL_FDATASYNC''@|1|g' \
+      -e 's|@''HAVE_DECL_GETDOMAINNAME''@|1|g' \
+      -e 's|@''HAVE_DECL_GETLOGIN_R''@|1|g' \
+      -e 's|@''HAVE_DECL_GETPAGESIZE''@|1|g' \
+      -e 's|@''HAVE_DECL_GETUSERSHELL''@|1|g' \
+      -e 's|@''HAVE_DECL_SETHOSTNAME''@|1|g' \
+      -e 's|@''HAVE_DECL_TTYNAME_R''@|1|g' \
+      -e 's|@''HAVE_OS_H''@|0|g' \
+      -e 's|@''HAVE_SYS_PARAM_H''@|0|g' \
+  | \
+  sed -e 's|@''REPLACE_CHOWN''@|0|g' \
+      -e 's|@''REPLACE_CLOSE''@|0|g' \
+      -e 's|@''REPLACE_DUP''@|0|g' \
+      -e 's|@''REPLACE_DUP2''@|0|g' \
+      -e 's|@''REPLACE_FCHOWNAT''@|0|g' \
+      -e 's|@''REPLACE_FTRUNCATE''@|0|g' \
+      -e 's|@''REPLACE_GETCWD''@|0|g' \
+      -e 's|@''REPLACE_GETDOMAINNAME''@|0|g' \
+      -e 's|@''REPLACE_GETLOGIN_R''@|0|g' \
+      -e 's|@''REPLACE_GETGROUPS''@|0|g' \
+      -e 's|@''REPLACE_GETPAGESIZE''@|0|g' \
+      -e 's|@''REPLACE_ISATTY''@|0|g' \
+      -e 's|@''REPLACE_LCHOWN''@|0|g' \
+      -e 's|@''REPLACE_LINK''@|0|g' \
+      -e 's|@''REPLACE_LINKAT''@|0|g' \
+      -e 's|@''REPLACE_LSEEK''@|0|g' \
+      -e 's|@''REPLACE_PREAD''@|0|g' \
+      -e 's|@''REPLACE_PWRITE''@|0|g' \
+      -e 's|@''REPLACE_READ''@|0|g' \
+      -e 's|@''REPLACE_READLINK''@|0|g' \
+      -e 's|@''REPLACE_RMDIR''@|0|g' \
+      -e 's|@''REPLACE_SLEEP''@|0|g' \
+      -e 's|@''REPLACE_SYMLINK''@|0|g' \
+      -e 's|@''REPLACE_TTYNAME_R''@|0|g' \
+      -e 's|@''REPLACE_UNLINK''@|0|g' \
+      -e 's|@''REPLACE_UNLINKAT''@|0|g' \
+      -e 's|@''REPLACE_USLEEP''@|0|g' \
+      -e 's|@''REPLACE_WRITE''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H''@|0|g' \
+      -e 's|@''UNISTD_H_HAVE_WINSOCK2_H_AND_USE_SOCKETS''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'; \
+} > unistd.h-t && \
+mv unistd.h-t unistd.h
+rm -f wchar.h-t wchar.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''HAVE_FEATURES_H''@|1|g' \
+      -e 's|@''NEXT_WCHAR_H''@|<wchar.h>|g' \
+      -e 's|@''HAVE_WCHAR_H''@|1|g' \
+      -e 's/@''GNULIB_BTOWC''@/1/g' \
+      -e 's/@''GNULIB_WCTOB''@/0/g' \
+      -e 's/@''GNULIB_MBSINIT''@/1/g' \
+      -e 's/@''GNULIB_MBRTOWC''@/1/g' \
+      -e 's/@''GNULIB_MBRLEN''@/0/g' \
+      -e 's/@''GNULIB_MBSRTOWCS''@/0/g' \
+      -e 's/@''GNULIB_MBSNRTOWCS''@/0/g' \
+      -e 's/@''GNULIB_WCRTOMB''@/1/g' \
+      -e 's/@''GNULIB_WCSRTOMBS''@/0/g' \
+      -e 's/@''GNULIB_WCSNRTOMBS''@/0/g' \
+      -e 's/@''GNULIB_WCWIDTH''@/0/g' \
+      -e 's/@''GNULIB_WMEMCHR''@/0/g' \
+      -e 's/@''GNULIB_WMEMCMP''@/0/g' \
+      -e 's/@''GNULIB_WMEMCPY''@/0/g' \
+      -e 's/@''GNULIB_WMEMMOVE''@/0/g' \
+      -e 's/@''GNULIB_WMEMSET''@/0/g' \
+      -e 's/@''GNULIB_WCSLEN''@/0/g' \
+      -e 's/@''GNULIB_WCSNLEN''@/0/g' \
+      -e 's/@''GNULIB_WCSCPY''@/0/g' \
+      -e 's/@''GNULIB_WCPCPY''@/0/g' \
+      -e 's/@''GNULIB_WCSNCPY''@/0/g' \
+      -e 's/@''GNULIB_WCPNCPY''@/0/g' \
+      -e 's/@''GNULIB_WCSCAT''@/0/g' \
+      -e 's/@''GNULIB_WCSNCAT''@/0/g' \
+      -e 's/@''GNULIB_WCSCMP''@/0/g' \
+      -e 's/@''GNULIB_WCSNCMP''@/0/g' \
+      -e 's/@''GNULIB_WCSCASECMP''@/0/g' \
+      -e 's/@''GNULIB_WCSNCASECMP''@/0/g' \
+      -e 's/@''GNULIB_WCSCOLL''@/0/g' \
+      -e 's/@''GNULIB_WCSXFRM''@/0/g' \
+      -e 's/@''GNULIB_WCSDUP''@/0/g' \
+      -e 's/@''GNULIB_WCSCHR''@/0/g' \
+      -e 's/@''GNULIB_WCSRCHR''@/0/g' \
+      -e 's/@''GNULIB_WCSCSPN''@/0/g' \
+      -e 's/@''GNULIB_WCSSPN''@/0/g' \
+      -e 's/@''GNULIB_WCSPBRK''@/0/g' \
+      -e 's/@''GNULIB_WCSSTR''@/0/g' \
+      -e 's/@''GNULIB_WCSTOK''@/0/g' \
+      -e 's/@''GNULIB_WCSWIDTH''@/0/g' \
+      < ./wchar.in.h | \
+  sed -e 's|@''HAVE_WINT_T''@|1|g' \
+      -e 's|@''HAVE_BTOWC''@|1|g' \
+      -e 's|@''HAVE_MBSINIT''@|1|g' \
+      -e 's|@''HAVE_MBRTOWC''@|1|g' \
+      -e 's|@''HAVE_MBRLEN''@|1|g' \
+      -e 's|@''HAVE_MBSRTOWCS''@|1|g' \
+      -e 's|@''HAVE_MBSNRTOWCS''@|1|g' \
+      -e 's|@''HAVE_WCRTOMB''@|1|g' \
+      -e 's|@''HAVE_WCSRTOMBS''@|1|g' \
+      -e 's|@''HAVE_WCSNRTOMBS''@|1|g' \
+      -e 's|@''HAVE_WMEMCHR''@|1|g' \
+      -e 's|@''HAVE_WMEMCMP''@|1|g' \
+      -e 's|@''HAVE_WMEMCPY''@|1|g' \
+      -e 's|@''HAVE_WMEMMOVE''@|1|g' \
+      -e 's|@''HAVE_WMEMSET''@|1|g' \
+      -e 's|@''HAVE_WCSLEN''@|1|g' \
+      -e 's|@''HAVE_WCSNLEN''@|1|g' \
+      -e 's|@''HAVE_WCSCPY''@|1|g' \
+      -e 's|@''HAVE_WCPCPY''@|1|g' \
+      -e 's|@''HAVE_WCSNCPY''@|1|g' \
+      -e 's|@''HAVE_WCPNCPY''@|1|g' \
+      -e 's|@''HAVE_WCSCAT''@|1|g' \
+      -e 's|@''HAVE_WCSNCAT''@|1|g' \
+      -e 's|@''HAVE_WCSCMP''@|1|g' \
+      -e 's|@''HAVE_WCSNCMP''@|1|g' \
+      -e 's|@''HAVE_WCSCASECMP''@|1|g' \
+      -e 's|@''HAVE_WCSNCASECMP''@|1|g' \
+      -e 's|@''HAVE_WCSCOLL''@|1|g' \
+      -e 's|@''HAVE_WCSXFRM''@|1|g' \
+      -e 's|@''HAVE_WCSDUP''@|1|g' \
+      -e 's|@''HAVE_WCSCHR''@|1|g' \
+      -e 's|@''HAVE_WCSRCHR''@|1|g' \
+      -e 's|@''HAVE_WCSCSPN''@|1|g' \
+      -e 's|@''HAVE_WCSSPN''@|1|g' \
+      -e 's|@''HAVE_WCSPBRK''@|1|g' \
+      -e 's|@''HAVE_WCSSTR''@|1|g' \
+      -e 's|@''HAVE_WCSTOK''@|1|g' \
+      -e 's|@''HAVE_WCSWIDTH''@|1|g' \
+      -e 's|@''HAVE_DECL_WCTOB''@|1|g' \
+      -e 's|@''HAVE_DECL_WCWIDTH''@|1|g' \
+  | \
+  sed -e 's|@''REPLACE_MBSTATE_T''@|0|g' \
+      -e 's|@''REPLACE_BTOWC''@|0|g' \
+      -e 's|@''REPLACE_WCTOB''@|0|g' \
+      -e 's|@''REPLACE_MBSINIT''@|0|g' \
+      -e 's|@''REPLACE_MBRTOWC''@|0|g' \
+      -e 's|@''REPLACE_MBRLEN''@|0|g' \
+      -e 's|@''REPLACE_MBSRTOWCS''@|0|g' \
+      -e 's|@''REPLACE_MBSNRTOWCS''@|0|g' \
+      -e 's|@''REPLACE_WCRTOMB''@|0|g' \
+      -e 's|@''REPLACE_WCSRTOMBS''@|0|g' \
+      -e 's|@''REPLACE_WCSNRTOMBS''@|0|g' \
+      -e 's|@''REPLACE_WCWIDTH''@|0|g' \
+      -e 's|@''REPLACE_WCSWIDTH''@|0|g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_ARG_NONNULL/r arg-nonnull.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h'; \
+} > wchar.h-t && \
+mv wchar.h-t wchar.h
+rm -f wctype.h-t wctype.h && \
+{ echo '/* DO NOT EDIT! GENERATED AUTOMATICALLY! */'; \
+  sed -e 's|@''GUARD_PREFIX''@|GL|g' \
+      -e 's/@''HAVE_WCTYPE_H''@/1/g' \
+      -e 's|@''INCLUDE_NEXT''@|include_next|g' \
+      -e 's|@''PRAGMA_SYSTEM_HEADER''@|#pragma GCC system_header|g' \
+      -e 's|@''PRAGMA_COLUMNS''@||g' \
+      -e 's|@''NEXT_WCTYPE_H''@|<wctype.h>|g' \
+      -e 's/@''GNULIB_ISWBLANK''@/0/g' \
+      -e 's/@''GNULIB_WCTYPE''@/0/g' \
+      -e 's/@''GNULIB_ISWCTYPE''@/0/g' \
+      -e 's/@''GNULIB_WCTRANS''@/0/g' \
+      -e 's/@''GNULIB_TOWCTRANS''@/0/g' \
+      -e 's/@''HAVE_ISWBLANK''@/1/g' \
+      -e 's/@''HAVE_ISWCNTRL''@/1/g' \
+      -e 's/@''HAVE_WCTYPE_T''@/1/g' \
+      -e 's/@''HAVE_WCTRANS_T''@/1/g' \
+      -e 's/@''HAVE_WINT_T''@/1/g' \
+      -e 's/@''REPLACE_ISWBLANK''@/0/g' \
+      -e 's/@''REPLACE_ISWCNTRL''@/0/g' \
+      -e 's/@''REPLACE_TOWLOWER''@/0/g' \
+      -e '/definitions of _GL_FUNCDECL_RPL/r c++defs.h' \
+      -e '/definition of _GL_WARN_ON_USE/r warn-on-use.h' \
+      < ./wctype.in.h; \
+} > wctype.h-t && \
+mv wctype.h-t wctype.h
+make  all-recursive
+make[3]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+make[4]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+depbase=`echo base64.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT base64.o -MD -MP -MF $depbase.Tpo -c -o base64.o base64.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo sha1.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sha1.o -MD -MP -MF $depbase.Tpo -c -o sha1.o sha1.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo dirname.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT dirname.o -MD -MP -MF $depbase.Tpo -c -o dirname.o dirname.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo basename.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT basename.o -MD -MP -MF $depbase.Tpo -c -o basename.o basename.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo dirname-lgpl.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT dirname-lgpl.o -MD -MP -MF $depbase.Tpo -c -o dirname-lgpl.o dirname-lgpl.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo basename-lgpl.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT basename-lgpl.o -MD -MP -MF $depbase.Tpo -c -o basename-lgpl.o basename-lgpl.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo stripslash.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT stripslash.o -MD -MP -MF $depbase.Tpo -c -o stripslash.o stripslash.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo exitfail.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT exitfail.o -MD -MP -MF $depbase.Tpo -c -o exitfail.o exitfail.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo fd-hook.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT fd-hook.o -MD -MP -MF $depbase.Tpo -c -o fd-hook.o fd-hook.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo full-read.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT full-read.o -MD -MP -MF $depbase.Tpo -c -o full-read.o full-read.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo idpriv-droptemp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT idpriv-droptemp.o -MD -MP -MF $depbase.Tpo -c -o idpriv-droptemp.o idpriv-droptemp.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo localcharset.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT localcharset.o -MD -MP -MF $depbase.Tpo -c -o localcharset.o localcharset.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo glthread/lock.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT glthread/lock.o -MD -MP -MF $depbase.Tpo -c -o glthread/lock.o glthread/lock.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo malloca.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT malloca.o -MD -MP -MF $depbase.Tpo -c -o malloca.o malloca.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo math.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT math.o -MD -MP -MF $depbase.Tpo -c -o math.o math.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo safe-read.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT safe-read.o -MD -MP -MF $depbase.Tpo -c -o safe-read.o safe-read.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo sockets.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sockets.o -MD -MP -MF $depbase.Tpo -c -o sockets.o sockets.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo sys_socket.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT sys_socket.o -MD -MP -MF $depbase.Tpo -c -o sys_socket.o sys_socket.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo glthread/threadlib.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT glthread/threadlib.o -MD -MP -MF $depbase.Tpo -c -o glthread/threadlib.o glthread/threadlib.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo unistd.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT unistd.o -MD -MP -MF $depbase.Tpo -c -o unistd.o unistd.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo wctype-h.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT wctype-h.o -MD -MP -MF $depbase.Tpo -c -o wctype-h.o wctype-h.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo xmalloc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT xmalloc.o -MD -MP -MF $depbase.Tpo -c -o xmalloc.o xmalloc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo xalloc-die.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT xalloc-die.o -MD -MP -MF $depbase.Tpo -c -o xalloc-die.o xalloc-die.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo xsize.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT xsize.o -MD -MP -MF $depbase.Tpo -c -o xsize.o xsize.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo xstrndup.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT xstrndup.o -MD -MP -MF $depbase.Tpo -c -o xstrndup.o xstrndup.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo asnprintf.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT asnprintf.o -MD -MP -MF $depbase.Tpo -c -o asnprintf.o asnprintf.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo fsusage.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT fsusage.o -MD -MP -MF $depbase.Tpo -c -o fsusage.o fsusage.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo mktime.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT mktime.o -MD -MP -MF $depbase.Tpo -c -o mktime.o mktime.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo mountlist.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT mountlist.o -MD -MP -MF $depbase.Tpo -c -o mountlist.o mountlist.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo printf-args.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT printf-args.o -MD -MP -MF $depbase.Tpo -c -o printf-args.o printf-args.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo printf-parse.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT printf-parse.o -MD -MP -MF $depbase.Tpo -c -o printf-parse.o printf-parse.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo vasnprintf.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I..     -g -O2 -MT vasnprintf.o -MD -MP -MF $depbase.Tpo -c -o vasnprintf.o vasnprintf.c &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libgnu.a
+ar cru libgnu.a base64.o sha1.o dirname.o basename.o dirname-lgpl.o basename-lgpl.o stripslash.o exitfail.o fd-hook.o full-read.o idpriv-droptemp.o localcharset.o glthread/lock.o malloca.o math.o safe-read.o sockets.o sys_socket.o glthread/threadlib.o unistd.o wctype-h.o xmalloc.o xalloc-die.o xsize.o xstrndup.o asnprintf.o fsusage.o mktime.o mountlist.o printf-args.o printf-parse.o vasnprintf.o
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libgnu.a
+rm -f t-charset.alias charset.alias && \
+/bin/sh ./config.charset 'x86_64-unknown-linux-gnu' > t-charset.alias && \
+mv t-charset.alias charset.alias
+rm -f t-ref-add.sed ref-add.sed && \
+sed -e '/^#/d' -e 's/@''PACKAGE''@/nagios-plugins/g' ref-add.sin > t-ref-add.sed && \
+mv t-ref-add.sed ref-add.sed
+rm -f t-ref-del.sed ref-del.sed && \
+sed -e '/^#/d' -e 's/@''PACKAGE''@/nagios-plugins/g' ref-del.sin > t-ref-del.sed && \
+mv t-ref-del.sed ref-del.sed
+make[4]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+make[3]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+Making all in tap
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/tap'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/tap'
+Making all in lib
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib'
+Making all in .
+make[3]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib'
+gcc -DHAVE_CONFIG_H -I. -I..  -DNP_STATE_DIR_PREFIX=\"/usr/local/nagios/var\" -I. -I../gl -I../intl -I../plugins   -g -O2 -MT utils_base.o -MD -MP -MF .deps/utils_base.Tpo -c -o utils_base.o utils_base.c
+mv -f .deps/utils_base.Tpo .deps/utils_base.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -DNP_STATE_DIR_PREFIX=\"/usr/local/nagios/var\" -I. -I../gl -I../intl -I../plugins   -g -O2 -MT utils_disk.o -MD -MP -MF .deps/utils_disk.Tpo -c -o utils_disk.o utils_disk.c
+mv -f .deps/utils_disk.Tpo .deps/utils_disk.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -DNP_STATE_DIR_PREFIX=\"/usr/local/nagios/var\" -I. -I../gl -I../intl -I../plugins   -g -O2 -MT utils_tcp.o -MD -MP -MF .deps/utils_tcp.Tpo -c -o utils_tcp.o utils_tcp.c
+mv -f .deps/utils_tcp.Tpo .deps/utils_tcp.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -DNP_STATE_DIR_PREFIX=\"/usr/local/nagios/var\" -I. -I../gl -I../intl -I../plugins   -g -O2 -MT utils_cmd.o -MD -MP -MF .deps/utils_cmd.Tpo -c -o utils_cmd.o utils_cmd.c
+mv -f .deps/utils_cmd.Tpo .deps/utils_cmd.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -DNP_STATE_DIR_PREFIX=\"/usr/local/nagios/var\" -I. -I../gl -I../intl -I../plugins   -g -O2 -MT parse_ini.o -MD -MP -MF .deps/parse_ini.Tpo -c -o parse_ini.o parse_ini.c
+parse_ini.c: In function ‘np_get_defaults’:
+parse_ini.c:121:21: warning: implicit declaration of function ‘idpriv_temp_drop’ [-Wimplicit-function-declaration]
+  if (is_suid_set && idpriv_temp_drop() == -1) 
+                     ^
+parse_ini.c:163:21: warning: implicit declaration of function ‘idpriv_temp_restore’ [-Wimplicit-function-declaration]
+  if (is_suid_set && idpriv_temp_restore() == -1) 
+                     ^
+mv -f .deps/parse_ini.Tpo .deps/parse_ini.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -DNP_STATE_DIR_PREFIX=\"/usr/local/nagios/var\" -I. -I../gl -I../intl -I../plugins   -g -O2 -MT extra_opts.o -MD -MP -MF .deps/extra_opts.Tpo -c -o extra_opts.o extra_opts.c
+mv -f .deps/extra_opts.Tpo .deps/extra_opts.Po
+rm -f libnagiosplug.a
+ar cru libnagiosplug.a utils_base.o utils_disk.o utils_tcp.o utils_cmd.o parse_ini.o extra_opts.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libnagiosplug.a
+make[3]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib'
+Making all in tests
+make[3]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib/tests'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib/tests'
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib'
+Making all in plugins
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins'
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT utils.o -MD -MP -MF .deps/utils.Tpo -c -o utils.o utils.c
+utils.c: In function ‘strntolower’:
+utils.c:777:24: warning: implicit declaration of function ‘tolower’ [-Wimplicit-function-declaration]
+                 *ptr = tolower(*ptr);
+                        ^
+utils.c: In function ‘strntoupper’:
+utils.c:787:24: warning: implicit declaration of function ‘toupper’ [-Wimplicit-function-declaration]
+                 *ptr = toupper(*ptr);
+                        ^
+utils.c: In function ‘timeout_alarm_handler’:
+utils.c:177:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(STDOUT_FILENO, "OK", 2);
+     ^
+utils.c:180:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(STDOUT_FILENO, "WARNING", 7);
+     ^
+utils.c:183:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(STDOUT_FILENO, "CRITICAL", 8);
+     ^
+utils.c:186:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(STDOUT_FILENO, "DEPENDENT", 9);
+     ^
+utils.c:189:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(STDOUT_FILENO, "UNKNOWN", 7);
+     ^
+utils.c:192:3: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   write(STDOUT_FILENO, msg, sizeof(msg) - 1);
+   ^
+mv -f .deps/utils.Tpo .deps/utils.Po
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT netutils.o -MD -MP -MF .deps/netutils.Tpo -c -o netutils.o netutils.c
+netutils.c: In function ‘socket_timeout_alarm_handler’:
+netutils.c:49:4: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+    write(STDOUT_FILENO, "OK", 2);
+    ^
+netutils.c:52:4: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+    write(STDOUT_FILENO, "WARNING", 7);
+    ^
+netutils.c:55:4: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+    write(STDOUT_FILENO, "CRITICAL", 8);
+    ^
+netutils.c:58:4: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+    write(STDOUT_FILENO, "DEPENDENT", 9);
+    ^
+netutils.c:61:4: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+    write(STDOUT_FILENO, "UNKNOWN", 7);
+    ^
+netutils.c:65:3: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   write(STDOUT_FILENO, msg1, sizeof(msg1) - 1);
+   ^
+netutils.c:68:3: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   write(STDOUT_FILENO, msg2, sizeof(msg2) - 1);
+   ^
+mv -f .deps/netutils.Tpo .deps/netutils.Po
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT sslutils.o -MD -MP -MF .deps/sslutils.Tpo -c -o sslutils.o sslutils.c
+mv -f .deps/sslutils.Tpo .deps/sslutils.Po
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT runcmd.o -MD -MP -MF .deps/runcmd.Tpo -c -o runcmd.o runcmd.c
+runcmd.c: In function ‘runcmd_timeout_alarm_handler’:
+runcmd.c:268:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(STDOUT_FILENO, "OK", 2);
+     ^
+runcmd.c:271:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(STDOUT_FILENO, "WARNING", 7);
+     ^
+runcmd.c:274:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(STDOUT_FILENO, "CRITICAL", 8);
+     ^
+runcmd.c:277:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(STDOUT_FILENO, "DEPENDENT", 9);
+     ^
+runcmd.c:280:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(STDOUT_FILENO, "UNKNOWN", 7);
+     ^
+runcmd.c:283:3: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   write(STDOUT_FILENO, msg, sizeof(msg) - 1);
+   ^
+mv -f .deps/runcmd.Tpo .deps/runcmd.Po
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT popen.o -MD -MP -MF .deps/popen.Tpo -c -o popen.o popen.c
+popen.c: In function ‘popen_timeout_alarm_handler’:
+popen.c:308:4: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+    write(STDOUT_FILENO, msg1, sizeof(msg1));
+    ^
+popen.c:311:4: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+    write(STDOUT_FILENO, msg2, sizeof(msg2));
+    ^
+mv -f .deps/popen.Tpo .deps/popen.Po
+rm -f libnpcommon.a
+ar cru libnpcommon.a utils.o netutils.o sslutils.o runcmd.o popen.o runcmd.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libnpcommon.a
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_apt.o -MD -MP -MF .deps/check_apt.Tpo -c -o check_apt.o check_apt.c
+mv -f .deps/check_apt.Tpo .deps/check_apt.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_apt check_apt.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_apt check_apt.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_cluster.o -MD -MP -MF .deps/check_cluster.Tpo -c -o check_cluster.o check_cluster.c
+mv -f .deps/check_cluster.Tpo .deps/check_cluster.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_cluster check_cluster.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_cluster check_cluster.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_disk.o -MD -MP -MF .deps/check_disk.Tpo -c -o check_disk.o check_disk.c
+check_disk.c: In function ‘main’:
+check_disk.c:294:17: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 10 has type ‘uintmax_t {aka long unsigned int}’ [-Wformat=]
+         printf ("For %s, used_pct=%g free_pct=%g used_units=%g free_units=%g total_units=%g used_inodes_pct=%g free_inodes_pct=%g fsp.fsu_blocksize=%llu mult=%llu\n",
+                 ^
+check_disk.c:294:17: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 11 has type ‘uintmax_t {aka long unsigned int}’ [-Wformat=]
+check_disk.c: In function ‘get_stats’:
+check_disk.c:1022:18: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘uintmax_t {aka long unsigned int}’ [-Wformat=]
+           printf("Group %s: adding %llu blocks sized %llu, (%s) used_units=%g free_units=%g total_units=%g fsu_blocksize=%llu mult=%llu\n",
+                  ^
+check_disk.c:1022:18: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 4 has type ‘uintmax_t {aka long unsigned int}’ [-Wformat=]
+check_disk.c:1022:18: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 9 has type ‘uintmax_t {aka long unsigned int}’ [-Wformat=]
+check_disk.c:1022:18: warning: format ‘%llu’ expects a matching ‘long long unsigned int’ argument [-Wformat=]
+check_disk.c:1043:16: warning: format ‘%g’ expects argument of type ‘double’, but argument 3 has type ‘uintmax_t {aka long unsigned int}’ [-Wformat=]
+         printf("Group %s now has: used_units=%g free_units=%g total_units=%g fsu_blocksize=%llu mult=%llu\n",
+                ^
+check_disk.c:1043:16: warning: format ‘%g’ expects argument of type ‘double’, but argument 4 has type ‘uintmax_t {aka long unsigned int}’ [-Wformat=]
+check_disk.c:1043:16: warning: format ‘%g’ expects argument of type ‘double’, but argument 5 has type ‘char *’ [-Wformat=]
+check_disk.c:1043:16: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 6 has type ‘double’ [-Wformat=]
+check_disk.c:1043:16: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 7 has type ‘double’ [-Wformat=]
+check_disk.c:1043:16: warning: too many arguments for format [-Wformat-extra-args]
+mv -f .deps/check_disk.Tpo .deps/check_disk.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_disk check_disk.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_disk check_disk.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_dummy.o -MD -MP -MF .deps/check_dummy.Tpo -c -o check_dummy.o check_dummy.c
+mv -f .deps/check_dummy.Tpo .deps/check_dummy.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_dummy check_dummy.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_dummy check_dummy.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_http.o -MD -MP -MF .deps/check_http.Tpo -c -o check_http.o check_http.c
+check_http.c: In function ‘check_http’:
+check_http.c:1000:5: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result]
+     asprintf (&buf, "%s %s:%d HTTP/1.1\r\n%s\r\n", http_method, host_name, HTTPS_PORT, user_agent);
+     ^
+check_http.c:1001:5: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result]
+     asprintf (&buf, "%sProxy-Connection: keep-alive\r\n", buf);
+     ^
+check_http.c:1002:5: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result]
+     asprintf (&buf, "%sHost: %s\r\n", buf, host_name);
+     ^
+check_http.c:1004:5: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result]
+     asprintf (&buf, "%s%s", buf, CRLF);
+     ^
+check_http.c:1010:5: warning: ignoring return value of ‘read’, declared with attribute warn_unused_result [-Wunused-result]
+     read (sd, buffer, MAX_INPUT_BUFFER-1);
+     ^
+check_http.c:1035:5: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result]
+     asprintf (&buf, "%s %s %s\r\n%s\r\n", "GET", server_url, host_name ? "HTTP/1.1" : "HTTP/1.0", user_agent);
+     ^
+check_http.c:1037:5: warning: ignoring return value of ‘asprintf’, declared with attribute warn_unused_result [-Wunused-result]
+     asprintf (&buf, "%s %s %s\r\n%s\r\n", http_method, server_url, host_name ? "HTTP/1.1" : "HTTP/1.0", user_agent);
+     ^
+mv -f .deps/check_http.Tpo .deps/check_http.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_http check_http.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lssl -lcrypto -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_http check_http.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lssl -lcrypto -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_load.o -MD -MP -MF .deps/check_load.Tpo -c -o check_load.o check_load.c
+In file included from ../gl/gettext.h:25:0,
+                 from common.h:202,
+                 from check_load.c:35:
+check_load.c: In function ‘main’:
+check_load.c:163:13: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat=]
+   printf (_("could not parse load from uptime: %s\n"), result, PATH_TO_UPTIME);
+             ^
+check_load.c:163:11: note: in expansion of macro ‘_’
+   printf (_("could not parse load from uptime: %s\n"), result, PATH_TO_UPTIME);
+           ^
+check_load.c:163:13: warning: too many arguments for format [-Wformat-extra-args]
+   printf (_("could not parse load from uptime: %s\n"), result, PATH_TO_UPTIME);
+             ^
+check_load.c:163:11: note: in expansion of macro ‘_’
+   printf (_("could not parse load from uptime: %s\n"), result, PATH_TO_UPTIME);
+           ^
+check_load.c:155:2: warning: ignoring return value of ‘fgets’, declared with attribute warn_unused_result [-Wunused-result]
+  fgets (input_buffer, MAX_INPUT_BUFFER - 1, child_process);
+  ^
+mv -f .deps/check_load.Tpo .deps/check_load.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_load check_load.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_load check_load.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_mrtg.o -MD -MP -MF .deps/check_mrtg.Tpo -c -o check_mrtg.o check_mrtg.c
+mv -f .deps/check_mrtg.Tpo .deps/check_mrtg.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_mrtg check_mrtg.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_mrtg check_mrtg.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_mrtgtraf.o -MD -MP -MF .deps/check_mrtgtraf.Tpo -c -o check_mrtgtraf.o check_mrtgtraf.c
+mv -f .deps/check_mrtgtraf.Tpo .deps/check_mrtgtraf.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_mrtgtraf check_mrtgtraf.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_mrtgtraf check_mrtgtraf.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_ntp.o -MD -MP -MF .deps/check_ntp.Tpo -c -o check_ntp.o check_ntp.c
+check_ntp.c: In function ‘offset_request’:
+check_ntp.c:432:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(socklist[i], &req[i], sizeof(ntp_message));
+     ^
+check_ntp.c:453:5: warning: ignoring return value of ‘read’, declared with attribute warn_unused_result [-Wunused-result]
+     read(ufds[i].fd, &req[i], sizeof(ntp_message));
+     ^
+check_ntp.c: In function ‘jitter_request’:
+check_ntp.c:549:3: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   write(conn, &req, SIZEOF_NTPCM(req));
+   ^
+check_ntp.c:554:3: warning: ignoring return value of ‘read’, declared with attribute warn_unused_result [-Wunused-result]
+   read(conn, &req, SIZEOF_NTPCM(req));
+   ^
+check_ntp.c:609:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(conn, &req, SIZEOF_NTPCM(req));
+     ^
+check_ntp.c:614:5: warning: ignoring return value of ‘read’, declared with attribute warn_unused_result [-Wunused-result]
+     read(conn, &req, SIZEOF_NTPCM(req));
+     ^
+mv -f .deps/check_ntp.Tpo .deps/check_ntp.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_ntp check_ntp.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lm -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_ntp check_ntp.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lm -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_ntp_peer.o -MD -MP -MF .deps/check_ntp_peer.Tpo -c -o check_ntp_peer.o check_ntp_peer.c
+check_ntp_peer.c: In function ‘ntp_request’:
+check_ntp_peer.c:242:3: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   write(conn, &req, SIZEOF_NTPCM(req));
+   ^
+check_ntp_peer.c:316:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(conn, &req, SIZEOF_NTPCM(req));
+     ^
+check_ntp_peer.c:322:6: warning: ignoring return value of ‘read’, declared with attribute warn_unused_result [-Wunused-result]
+      read(conn, &req, SIZEOF_NTPCM(req));
+      ^
+mv -f .deps/check_ntp_peer.Tpo .deps/check_ntp_peer.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_ntp_peer check_ntp_peer.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lm -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_ntp_peer check_ntp_peer.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lm -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_nwstat.o -MD -MP -MF .deps/check_nwstat.Tpo -c -o check_nwstat.o check_nwstat.c
+mv -f .deps/check_nwstat.Tpo .deps/check_nwstat.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_nwstat check_nwstat.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_nwstat check_nwstat.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_overcr.o -MD -MP -MF .deps/check_overcr.Tpo -c -o check_overcr.o check_overcr.c
+mv -f .deps/check_overcr.Tpo .deps/check_overcr.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_overcr check_overcr.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_overcr check_overcr.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_ping.o -MD -MP -MF .deps/check_ping.Tpo -c -o check_ping.o check_ping.c
+mv -f .deps/check_ping.Tpo .deps/check_ping.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_ping check_ping.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_ping check_ping.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_real.o -MD -MP -MF .deps/check_real.Tpo -c -o check_real.o check_real.c
+mv -f .deps/check_real.Tpo .deps/check_real.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_real check_real.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_real check_real.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_smtp.o -MD -MP -MF .deps/check_smtp.Tpo -c -o check_smtp.o check_smtp.c
+mv -f .deps/check_smtp.Tpo .deps/check_smtp.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_smtp check_smtp.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lssl -lcrypto -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_smtp check_smtp.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lssl -lcrypto -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_ssh.o -MD -MP -MF .deps/check_ssh.Tpo -c -o check_ssh.o check_ssh.c
+mv -f .deps/check_ssh.Tpo .deps/check_ssh.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_ssh check_ssh.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_ssh check_ssh.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_tcp.o -MD -MP -MF .deps/check_tcp.Tpo -c -o check_tcp.o check_tcp.c
+mv -f .deps/check_tcp.Tpo .deps/check_tcp.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_tcp check_tcp.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lssl -lcrypto -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_tcp check_tcp.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lssl -lcrypto -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_time.o -MD -MP -MF .deps/check_time.Tpo -c -o check_time.o check_time.c
+mv -f .deps/check_time.Tpo .deps/check_time.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_time check_time.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_time check_time.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_ntp_time.o -MD -MP -MF .deps/check_ntp_time.Tpo -c -o check_ntp_time.o check_ntp_time.c
+check_ntp_time.c: In function ‘offset_request’:
+check_ntp_time.c:378:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(socklist[i], &req[i], sizeof(ntp_message));
+     ^
+check_ntp_time.c:399:5: warning: ignoring return value of ‘read’, declared with attribute warn_unused_result [-Wunused-result]
+     read(ufds[i].fd, &req[i], sizeof(ntp_message));
+     ^
+mv -f .deps/check_ntp_time.Tpo .deps/check_ntp_time.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_ntp_time check_ntp_time.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lm -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_ntp_time check_ntp_time.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lm -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_ups.o -MD -MP -MF .deps/check_ups.Tpo -c -o check_ups.o check_ups.c
+mv -f .deps/check_ups.Tpo .deps/check_ups.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_ups check_ups.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_ups check_ups.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_users.o -MD -MP -MF .deps/check_users.Tpo -c -o check_users.o check_users.c
+mv -f .deps/check_users.Tpo .deps/check_users.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_users check_users.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a   -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_users check_users.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT negate.o -MD -MP -MF .deps/negate.Tpo -c -o negate.o negate.c
+mv -f .deps/negate.Tpo .deps/negate.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o negate negate.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o negate negate.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT urlize.o -MD -MP -MF .deps/urlize.Tpo -c -o urlize.o urlize.c
+mv -f .deps/urlize.Tpo .deps/urlize.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o urlize urlize.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o urlize urlize.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_ldap.o -MD -MP -MF .deps/check_ldap.Tpo -c -o check_ldap.o check_ldap.c
+mv -f .deps/check_ldap.Tpo .deps/check_ldap.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_ldap check_ldap.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lldap -llber -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_ldap check_ldap.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lldap -llber -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_ide_smart.o -MD -MP -MF .deps/check_ide_smart.Tpo -c -o check_ide_smart.o check_ide_smart.c
+mv -f .deps/check_ide_smart.Tpo .deps/check_ide_smart.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_ide_smart check_ide_smart.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_ide_smart check_ide_smart.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_uptime.o -MD -MP -MF .deps/check_uptime.Tpo -c -o check_uptime.o check_uptime.c
+In file included from check_uptime.c:29:0:
+check_uptime.c: In function ‘print_help’:
+utils.h:128:19: warning: too many arguments for format [-Wformat-extra-args]
+ #define COPYRIGHT "Copyright (c) %s Nagios Plugin Development Team\n\
+                   ^
+check_uptime.c:224:11: note: in expansion of macro ‘COPYRIGHT’
+  printf ( COPYRIGHT, copyright, developer, email );
+           ^
+mv -f .deps/check_uptime.Tpo .deps/check_uptime.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_uptime check_uptime.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lrt -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_uptime check_uptime.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lrt -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_procs.o -MD -MP -MF .deps/check_procs.Tpo -c -o check_procs.o check_procs.c
+mv -f .deps/check_procs.Tpo .deps/check_procs.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_procs check_procs.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_procs check_procs.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_nagios.o -MD -MP -MF .deps/check_nagios.Tpo -c -o check_nagios.o check_nagios.c
+mv -f .deps/check_nagios.Tpo .deps/check_nagios.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_nagios check_nagios.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_nagios check_nagios.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_dns.o -MD -MP -MF .deps/check_dns.Tpo -c -o check_dns.o check_dns.c
+mv -f .deps/check_dns.Tpo .deps/check_dns.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_dns check_dns.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_dns check_dns.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_by_ssh.o -MD -MP -MF .deps/check_by_ssh.Tpo -c -o check_by_ssh.o check_by_ssh.c
+mv -f .deps/check_by_ssh.Tpo .deps/check_by_ssh.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_by_ssh check_by_ssh.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_by_ssh check_by_ssh.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_swap.o -MD -MP -MF .deps/check_swap.Tpo -c -o check_swap.o check_swap.c
+mv -f .deps/check_swap.Tpo .deps/check_swap.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_swap check_swap.o -lm libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_swap check_swap.o  -L. -lm libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_dig.o -MD -MP -MF .deps/check_dig.Tpo -c -o check_dig.o check_dig.c
+mv -f .deps/check_dig.Tpo .deps/check_dig.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_dig check_dig.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lm -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_dig check_dig.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lm -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I/usr/include/ldap  -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_nt.o -MD -MP -MF .deps/check_nt.Tpo -c -o check_nt.o check_nt.c
+mv -f .deps/check_nt.Tpo .deps/check_nt.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_nt check_nt.o libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv  -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_nt check_nt.o  -L. libnpcommon.a ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+rm -f check_ftp
+ln -s check_tcp check_ftp
+rm -f check_imap
+ln -s check_tcp check_imap
+rm -f check_nntp
+ln -s check_tcp check_nntp
+rm -f check_pop
+ln -s check_tcp check_pop
+rm -f check_udp
+ln -s check_tcp check_udp
+rm -f check_clamd
+ln -s check_tcp check_clamd
+rm -f check_simap
+ln -s check_tcp check_simap
+rm -f check_spop
+ln -s check_tcp check_spop
+rm -f check_jabber
+ln -s check_tcp check_jabber
+rm -f check_nntps
+ln -s check_tcp check_nntps
+rm -f check_ssmtp
+ln -s check_tcp check_ssmtp
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins'
+Making all in plugins-scripts
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-scripts'
+sed -e 's|[@]NP_VERSION[@]|2.1.4|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin|g' -e 's|[@]PERL[@]|/usr/bin/perl|g' -e 's|[@]libexecdir[@]|/usr/local/nagios/libexec|g' check_breeze.pl > check_breeze
+chmod +x check_breeze
+sed -e 's|[@]NP_VERSION[@]|2.1.4|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin|g' -e 's|[@]PERL[@]|/usr/bin/perl|g' -e 's|[@]libexecdir[@]|/usr/local/nagios/libexec|g' check_disk_smb.pl > check_disk_smb
+chmod +x check_disk_smb
+sed -e 's|[@]NP_VERSION[@]|2.1.4|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin|g' -e 's|[@]PERL[@]|/usr/bin/perl|g' -e 's|[@]libexecdir[@]|/usr/local/nagios/libexec|g' check_flexlm.pl > check_flexlm
+chmod +x check_flexlm
+sed -e 's|[@]NP_VERSION[@]|2.1.4|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin|g' -e 's|[@]PERL[@]|/usr/bin/perl|g' -e 's|[@]libexecdir[@]|/usr/local/nagios/libexec|g' check_ircd.pl > check_ircd
+chmod +x check_ircd
+sed -e 's|[@]NP_VERSION[@]|2.1.4|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin|g' -e 's|[@]PERL[@]|/usr/bin/perl|g' -e 's|[@]libexecdir[@]|/usr/local/nagios/libexec|g' check_log.sh > check_log
+chmod +x check_log
+sed -e 's|[@]NP_VERSION[@]|2.1.4|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin|g' -e 's|[@]PERL[@]|/usr/bin/perl|g' -e 's|[@]libexecdir[@]|/usr/local/nagios/libexec|g' check_oracle.sh > check_oracle
+chmod +x check_oracle
+sed -e 's|[@]NP_VERSION[@]|2.1.4|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin|g' -e 's|[@]PERL[@]|/usr/bin/perl|g' -e 's|[@]libexecdir[@]|/usr/local/nagios/libexec|g' check_rpc.pl > check_rpc
+chmod +x check_rpc
+sed -e 's|[@]NP_VERSION[@]|2.1.4|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin|g' -e 's|[@]PERL[@]|/usr/bin/perl|g' -e 's|[@]libexecdir[@]|/usr/local/nagios/libexec|g' check_sensors.sh > check_sensors
+chmod +x check_sensors
+sed -e 's|[@]NP_VERSION[@]|2.1.4|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin|g' -e 's|[@]PERL[@]|/usr/bin/perl|g' -e 's|[@]libexecdir[@]|/usr/local/nagios/libexec|g' check_wave.pl > check_wave
+chmod +x check_wave
+sed -e 's|[@]NP_VERSION[@]|2.1.4|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin|g' -e 's|[@]PERL[@]|/usr/bin/perl|g' -e 's|[@]libexecdir[@]|/usr/local/nagios/libexec|g' check_ifstatus.pl > check_ifstatus
+chmod +x check_ifstatus
+sed -e 's|[@]NP_VERSION[@]|2.1.4|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin|g' -e 's|[@]PERL[@]|/usr/bin/perl|g' -e 's|[@]libexecdir[@]|/usr/local/nagios/libexec|g' check_ifoperstatus.pl > check_ifoperstatus
+chmod +x check_ifoperstatus
+sed -e 's|[@]NP_VERSION[@]|2.1.4|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin|g' -e 's|[@]PERL[@]|/usr/bin/perl|g' -e 's|[@]libexecdir[@]|/usr/local/nagios/libexec|g' check_mailq.pl > check_mailq
+chmod +x check_mailq
+sed -e 's|[@]NP_VERSION[@]|2.1.4|g' -e 's|[@]TRUSTED_PATH[@]|/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin|g' -e 's|[@]PERL[@]|/usr/bin/perl|g' -e 's|[@]libexecdir[@]|/usr/local/nagios/libexec|g' check_file_age.pl > check_file_age
+chmod +x check_file_age
+cd .. && /bin/sh ./config.status plugins-scripts/utils.sh
+config.status: creating plugins-scripts/utils.sh
+cd .. && /bin/sh ./config.status plugins-scripts/utils.pm
+config.status: creating plugins-scripts/utils.pm
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-scripts'
+Making all in plugins-root
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-root'
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I../plugins -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_dhcp.o -MD -MP -MF .deps/check_dhcp.Tpo -c -o check_dhcp.o check_dhcp.c
+mv -f .deps/check_dhcp.Tpo .deps/check_dhcp.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_dhcp check_dhcp.o ../plugins/netutils.o ../plugins/utils.o ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_dhcp check_dhcp.o ../plugins/netutils.o ../plugins/utils.o  -L. ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+gcc -DLOCALEDIR=\"/usr/local/nagios/share/locale\" -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../gl -I../intl -I../plugins -I/usr/include  -DNP_VERSION='"2.1.4"' -g -O2 -MT check_icmp.o -MD -MP -MF .deps/check_icmp.Tpo -c -o check_icmp.o check_icmp.c
+check_icmp.c: In function ‘main’:
+check_icmp.c:416:2: warning: ignoring return value of ‘setuid’, declared with attribute warn_unused_result [-Wunused-result]
+  setuid(getuid());
+  ^
+check_icmp.c: In function ‘finish’:
+check_icmp.c:1056:13: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   if(debug) write(STDOUT_FILENO, "\n", 1);
+             ^
+check_icmp.c:1058:20: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+    if(i < targets) write(STDOUT_FILENO, " :: ", 4);
+                    ^
+check_icmp.c:1059:9: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+    else write(STDOUT_FILENO, "\n", 1);
+         ^
+check_icmp.c:1088:13: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   if(debug) write(STDOUT_FILENO, "\n", 1);
+             ^
+mv -f .deps/check_icmp.Tpo .deps/check_icmp.Po
+/bin/sh ../libtool --tag=CC   --mode=link gcc -DNP_VERSION='"2.1.4"' -g -O2  -L. -o check_icmp check_icmp.o ../plugins/netutils.o ../plugins/utils.o ../lib/libnagiosplug.a ../gl/libgnu.a  -lnsl -lresolv -lnsl -lresolv -lpthread -ldl 
+libtool: link: gcc -DNP_VERSION=\"2.1.4\" -g -O2 -o check_icmp check_icmp.o ../plugins/netutils.o ../plugins/utils.o  -L. ../lib/libnagiosplug.a ../gl/libgnu.a -lnsl -lresolv -lpthread -ldl
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-root'
+Making all in po
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/po'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/po'
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4'
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4'
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4'
+
+real	0m16.989s
+user	0m12.752s
+sys	0m1.200s
+Making install in gl
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+make  install-recursive
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+make[3]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+make[4]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+if test yes = no; then \
+  case 'linux-gnu' in \
+    darwin[56]*) \
+      need_charset_alias=true ;; \
+    darwin* | cygwin* | mingw* | pw32* | cegcc*) \
+      need_charset_alias=false ;; \
+    *) \
+      need_charset_alias=true ;; \
+  esac ; \
+else \
+  need_charset_alias=false ; \
+fi ; \
+if $need_charset_alias; then \
+  /bin/sh ../build-aux/mkinstalldirs /usr/local/nagios/lib ; \
+fi ; \
+if test -f /usr/local/nagios/lib/charset.alias; then \
+  sed -f ref-add.sed /usr/local/nagios/lib/charset.alias > /usr/local/nagios/lib/charset.tmp ; \
+  /usr/bin/install -c  -m 644 /usr/local/nagios/lib/charset.tmp /usr/local/nagios/lib/charset.alias ; \
+  rm -f /usr/local/nagios/lib/charset.tmp ; \
+else \
+  if $need_charset_alias; then \
+    sed -f ref-add.sed charset.alias > /usr/local/nagios/lib/charset.tmp ; \
+    /usr/bin/install -c  -m 644 /usr/local/nagios/lib/charset.tmp /usr/local/nagios/lib/charset.alias ; \
+    rm -f /usr/local/nagios/lib/charset.tmp ; \
+  fi ; \
+fi
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+make[3]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/gl'
+Making install in tap
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/tap'
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/tap'
+make[2]: Nothing to be done for 'install-exec-am'.
+test -z "/usr/local/nagios/include" || /bin/mkdir -p "/usr/local/nagios/include"
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/tap'
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/tap'
+Making install in lib
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib'
+Making install in .
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib'
+make[3]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib'
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib'
+Making install in tests
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib/tests'
+make[3]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib/tests'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib/tests'
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib/tests'
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/lib'
+Making install in plugins
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins'
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins'
+test -z "/usr/local/nagios/libexec" || /bin/mkdir -p "/usr/local/nagios/libexec"
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c  check_apt check_cluster check_disk check_dummy check_http check_load check_mrtg check_mrtgtraf check_ntp check_ntp_peer check_nwstat check_overcr check_ping check_real check_smtp check_ssh check_tcp check_time check_ntp_time check_ups check_users negate urlize check_ldap check_ide_smart check_uptime check_procs check_nagios check_dns check_by_ssh check_swap check_dig check_apt check_nt '/usr/local/nagios/libexec'
+libtool: install: /usr/bin/install -c check_apt /usr/local/nagios/libexec/check_apt
+libtool: install: /usr/bin/install -c check_cluster /usr/local/nagios/libexec/check_cluster
+libtool: install: /usr/bin/install -c check_disk /usr/local/nagios/libexec/check_disk
+libtool: install: /usr/bin/install -c check_dummy /usr/local/nagios/libexec/check_dummy
+libtool: install: /usr/bin/install -c check_http /usr/local/nagios/libexec/check_http
+libtool: install: /usr/bin/install -c check_load /usr/local/nagios/libexec/check_load
+libtool: install: /usr/bin/install -c check_mrtg /usr/local/nagios/libexec/check_mrtg
+libtool: install: /usr/bin/install -c check_mrtgtraf /usr/local/nagios/libexec/check_mrtgtraf
+libtool: install: /usr/bin/install -c check_ntp /usr/local/nagios/libexec/check_ntp
+libtool: install: /usr/bin/install -c check_ntp_peer /usr/local/nagios/libexec/check_ntp_peer
+libtool: install: /usr/bin/install -c check_nwstat /usr/local/nagios/libexec/check_nwstat
+libtool: install: /usr/bin/install -c check_overcr /usr/local/nagios/libexec/check_overcr
+libtool: install: /usr/bin/install -c check_ping /usr/local/nagios/libexec/check_ping
+libtool: install: /usr/bin/install -c check_real /usr/local/nagios/libexec/check_real
+libtool: install: /usr/bin/install -c check_smtp /usr/local/nagios/libexec/check_smtp
+libtool: install: /usr/bin/install -c check_ssh /usr/local/nagios/libexec/check_ssh
+libtool: install: /usr/bin/install -c check_tcp /usr/local/nagios/libexec/check_tcp
+libtool: install: /usr/bin/install -c check_time /usr/local/nagios/libexec/check_time
+libtool: install: /usr/bin/install -c check_ntp_time /usr/local/nagios/libexec/check_ntp_time
+libtool: install: /usr/bin/install -c check_ups /usr/local/nagios/libexec/check_ups
+libtool: install: /usr/bin/install -c check_users /usr/local/nagios/libexec/check_users
+libtool: install: /usr/bin/install -c negate /usr/local/nagios/libexec/negate
+libtool: install: /usr/bin/install -c urlize /usr/local/nagios/libexec/urlize
+libtool: install: /usr/bin/install -c check_ldap /usr/local/nagios/libexec/check_ldap
+libtool: install: /usr/bin/install -c check_ide_smart /usr/local/nagios/libexec/check_ide_smart
+libtool: install: /usr/bin/install -c check_uptime /usr/local/nagios/libexec/check_uptime
+libtool: install: /usr/bin/install -c check_procs /usr/local/nagios/libexec/check_procs
+libtool: install: /usr/bin/install -c check_nagios /usr/local/nagios/libexec/check_nagios
+libtool: install: /usr/bin/install -c check_dns /usr/local/nagios/libexec/check_dns
+libtool: install: /usr/bin/install -c check_by_ssh /usr/local/nagios/libexec/check_by_ssh
+libtool: install: /usr/bin/install -c check_swap /usr/local/nagios/libexec/check_swap
+libtool: install: /usr/bin/install -c check_dig /usr/local/nagios/libexec/check_dig
+libtool: install: /usr/bin/install -c check_apt /usr/local/nagios/libexec/check_apt
+libtool: install: /usr/bin/install -c check_nt /usr/local/nagios/libexec/check_nt
+make  install-exec-hook
+make[3]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins'
+cd /usr/local/nagios/libexec && \
+for i in check_ftp check_imap check_nntp check_pop check_udp check_clamd check_simap check_spop check_jabber check_nntps check_ssmtp ; do rm -f $i; ln -s check_tcp $i ; done ;\
+if [ -x check_ldap ] ; then rm -f check_ldaps ; ln -s check_ldap check_ldaps ; fi
+make[3]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins'
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins'
+Making install in plugins-scripts
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-scripts'
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-scripts'
+test -z "/usr/local/nagios/libexec" || /bin/mkdir -p "/usr/local/nagios/libexec"
+ /usr/bin/install -c  check_breeze check_disk_smb check_flexlm check_ircd check_log check_oracle check_rpc check_sensors check_wave check_ifstatus check_ifoperstatus check_mailq check_file_age utils.sh utils.pm '/usr/local/nagios/libexec'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-scripts'
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-scripts'
+Making install in plugins-root
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-root'
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-root'
+ /usr/bin/install -c  check_dhcp /usr/local/nagios/libexec/check_dhcp
+ chown root /usr/local/nagios/libexec/check_dhcp
+ chmod ug=rx,u+s /usr/local/nagios/libexec/check_dhcp
+ /usr/bin/install -c  check_icmp /usr/local/nagios/libexec/check_icmp
+ chown root /usr/local/nagios/libexec/check_icmp
+ chmod ug=rx,u+s /usr/local/nagios/libexec/check_icmp
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-root'
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/plugins-root'
+Making install in po
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/po'
+/bin/mkdir -p /usr/local/nagios/share
+installing fr.gmo as /usr/local/nagios/share/locale/fr/LC_MESSAGES/nagios-plugins.mo
+installing de.gmo as /usr/local/nagios/share/locale/de/LC_MESSAGES/nagios-plugins.mo
+if test "nagios-plugins" = "gettext-tools"; then \
+  /bin/mkdir -p /usr/local/nagios/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin    Makevars.template; do \
+    /usr/bin/install -c  -m 644 ./$file \
+		    /usr/local/nagios/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /usr/local/nagios/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4/po'
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4'
+make[2]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4'
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nagiosplugins/nagios-plugins-2.1.4'
+
+real	0m0.470s
+user	0m0.264s
+sys	0m0.016s
+
+real	1m11.066s
+user	0m24.440s
+sys	0m4.416s
+NRPE
+checking for a BSD-compatible install... /usr/bin/install -c
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+checking whether make sets $(MAKE)... yes
+checking how to run the C preprocessor... gcc -E
+checking for egrep... grep -E
+checking for ANSI C header files... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking ctype.h usability... yes
+checking ctype.h presence... yes
+checking for ctype.h... yes
+checking dirent.h usability... yes
+checking dirent.h presence... yes
+checking for dirent.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking for inttypes.h... (cached) yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking for stdint.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for string.h... (cached) yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking tcpd.h usability... yes
+checking tcpd.h presence... yes
+checking for tcpd.h... yes
+checking for unistd.h... (cached) yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking socket.h usability... no
+checking socket.h presence... no
+checking for socket.h... no
+checking for sys/types.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking for sys/wait.h... (cached) yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking for sys/stat.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for mode_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking return type of signal handlers... void
+checking for uid_t in sys/types.h... yes
+checking type of array argument to getgroups... gid_t
+checking for int... yes
+checking size of int... 4
+checking for short... yes
+checking size of short... 2
+checking for long... yes
+checking size of long... 8
+checking for uint32_t... yes
+checking for u_int32_t... yes
+checking for int32_t... yes
+checking for va_copy... yes
+checking for vsnprintf... yes
+checking for snprintf... yes
+checking for asprintf... yes
+checking for vasprintf... yes
+checking for C99 vsnprintf... yes
+checking for getopt_long... yes
+checking for main in -lnsl... yes
+checking for socket in -lsocket... no
+checking for main in -lwrap... yes
+checking for strdup... yes
+checking for strstr... yes
+checking for strtoul... yes
+checking for initgroups... yes
+checking for closesocket... no
+checking for socklen_t... yes
+checking for type of socket size... size_t
+checking for SSL headers... SSL headers found in /usr
+checking for SSL libraries... SSL libraries found in /usr/lib/x86_64-linux-gnu/
+
+*** Generating DH Parameters for SSL/TLS ***
+Generating DH parameters, 512 bit long safe prime, generator 2
+This is going to take a long time
+........+.................+..........................++*++*++*++*++*++*
+checking for Kerberos include files... could not find include files
+checking for perl... /usr/bin/perl
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating subst
+config.status: creating src/Makefile
+config.status: creating package/solaris/Makefile
+config.status: creating init-script
+config.status: creating init-script.debian
+config.status: creating init-script.suse
+config.status: creating nrpe.spec
+config.status: creating sample-config/nrpe.cfg
+config.status: creating sample-config/nrpe.xinetd
+config.status: creating include/config.h
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE ([^}]+)}/ at subst line 34.
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE exec_prefix}/ at subst line 28.
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE prefix}/ at subst line 28.
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE ([^}]+)}/ at subst line 34.
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE exec_prefix}/ at subst line 28.
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE prefix}/ at subst line 28.
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE ([^}]+)}/ at subst line 34.
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE exec_prefix}/ at subst line 28.
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE prefix}/ at subst line 28.
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE ([^}]+)}/ at subst line 34.
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE exec_prefix}/ at subst line 28.
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE prefix}/ at subst line 28.
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE ([^}]+)}/ at subst line 34.
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE exec_prefix}/ at subst line 28.
+Unescaped left brace in regex is deprecated, passed through in regex; marked by <-- HERE in m/\${ <-- HERE prefix}/ at subst line 28.
+
+
+*** Configuration summary for nrpe 2.15 09-06-2013 ***:
+
+ General Options:
+ -------------------------
+ NRPE port:    5666
+ NRPE user:    nagios
+ NRPE group:   nagios
+ Nagios user:  nagios
+ Nagios group: nagios
+
+
+Review the options above for accuracy.  If they look okay,
+type 'make all' to compile the NRPE daemon and client.
+
+cd ./src/; make ; cd ..
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nrpe/nrpe-2.15/src'
+gcc -g -O2 -I/usr/include/openssl -I/usr/include -DHAVE_CONFIG_H -I ../include -I ./../include -o nrpe ./nrpe.c ./utils.c ./acl.c -L/usr/lib/x86_64-linux-gnu/  -lssl -lcrypto -lnsl -lwrap  
+./nrpe.c: In function ‘main’:
+./nrpe.c:118:2: warning: implicit declaration of function ‘asprintf’ [-Wimplicit-function-declaration]
+  asprintf(&env_string,"NRPE_MULTILINESUPPORT=1");
+  ^
+./nrpe.c:204:3: warning: ignoring return value of ‘getcwd’, declared with attribute warn_unused_result [-Wunused-result]
+   getcwd(config_file,sizeof(config_file));
+   ^
+./nrpe.c:309:3: warning: ignoring return value of ‘chdir’, declared with attribute warn_unused_result [-Wunused-result]
+   chdir("/");
+   ^
+./nrpe.c:379:3: warning: ignoring return value of ‘chdir’, declared with attribute warn_unused_result [-Wunused-result]
+   chdir("/");
+   ^
+./nrpe.c: In function ‘my_system’:
+./nrpe.c:1491:2: warning: ignoring return value of ‘pipe’, declared with attribute warn_unused_result [-Wunused-result]
+  pipe(fd);
+  ^
+./nrpe.c:1544:4: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+    write(fd[1],buffer,strlen(buffer)+1);
+    ^
+./nrpe.c:1554:5: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+     write(fd[1],buffer,bytes_read);
+     ^
+./nrpe.c: In function ‘write_pid_file’:
+./nrpe.c:1766:3: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   write(fd,pbuf,strlen(pbuf));
+   ^
+./utils.c: In function ‘my_connect’:
+./utils.c:151:10: warning: implicit declaration of function ‘my_create_socket’ [-Wimplicit-function-declaration]
+   sock = my_create_socket(ai, bind_address);
+          ^
+gcc -g -O2 -I/usr/include/openssl -I/usr/include -DHAVE_CONFIG_H -I ../include -I ./../include -o check_nrpe ./check_nrpe.c ./utils.c -L/usr/lib/x86_64-linux-gnu/  -lssl -lcrypto -lnsl 
+./check_nrpe.c: In function ‘main’:
+./check_nrpe.c:276:11: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
+    printf("CHECK_NRPE: Receive underflow - only %d bytes received (%d expected).\n",bytes_to_recv,sizeof(receive_packet));
+           ^
+./utils.c: In function ‘my_connect’:
+./utils.c:151:10: warning: implicit declaration of function ‘my_create_socket’ [-Wimplicit-function-declaration]
+   sock = my_create_socket(ai, bind_address);
+          ^
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nrpe/nrpe-2.15/src'
+
+*** Compile finished ***
+
+If the NRPE daemon and client compiled without any errors, you
+can continue with the installation or upgrade process.
+
+Read the PDF documentation (NRPE.pdf) for information on the next
+steps you should take to complete the installation or upgrade.
+
+cd ./src/ && make install-plugin
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nrpe/nrpe-2.15/src'
+/usr/bin/install -c -m 775 -o nagios -g nagios -d /usr/local/nagios/libexec
+/usr/bin/install -c -m 775 -o nagios -g nagios check_nrpe /usr/local/nagios/libexec
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nrpe/nrpe-2.15/src'
+cd ./src/ && make install-daemon
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nrpe/nrpe-2.15/src'
+/usr/bin/install -c -m 775 -o nagios -g nagios -d /usr/local/nagios/bin
+/usr/bin/install -c -m 775 -o nagios -g nagios nrpe /usr/local/nagios/bin
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nrpe/nrpe-2.15/src'
+/usr/bin/install -c -m 644 sample-config/nrpe.xinetd /etc/xinetd.d/nrpe 
+/usr/bin/install -c -m 775 -o nagios -g nagios -d /usr/local/nagios/etc
+/usr/bin/install -c -m 644 -o nagios -g nagios sample-config/nrpe.cfg /usr/local/nagios/etc
+NRPE-POST
+
+real	0m5.310s
+user	0m2.448s
+sys	0m0.484s
+NSCA
+checking for a BSD-compatible install... /usr/bin/install -c
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+checking whether make sets $(MAKE)... yes
+checking how to run the C preprocessor... gcc -E
+checking for egrep... grep -E
+checking for ANSI C header files... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking db.h usability... no
+checking db.h presence... no
+checking for db.h... no
+checking ctype.h usability... yes
+checking ctype.h presence... yes
+checking for ctype.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking for inttypes.h... (cached) yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking regex.h usability... yes
+checking regex.h presence... yes
+checking for regex.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking for stdint.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for string.h... (cached) yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking tcpd.h usability... yes
+checking tcpd.h presence... yes
+checking for tcpd.h... yes
+checking for unistd.h... (cached) yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking sys/config.h usability... no
+checking sys/config.h presence... no
+checking for sys/config.h... no
+checking sys/int_types.h usability... no
+checking sys/int_types.h presence... no
+checking for sys/int_types.h... no
+checking sys/poll.h usability... yes
+checking sys/poll.h presence... yes
+checking for sys/poll.h... yes
+checking for sys/types.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/wait.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for working volatile... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for mode_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking return type of signal handlers... void
+checking for uid_t in sys/types.h... yes
+checking type of array argument to getgroups... gid_t
+checking for int... yes
+checking size of int... 4
+checking for short... yes
+checking size of short... 2
+checking for long... yes
+checking size of long... 8
+checking for uint32_t... yes
+checking for u_int32_t... yes
+checking for int32_t... yes
+checking for main in -lnsl... yes
+checking for socket in -lsocket... no
+checking for main in -lwrap... yes
+checking for strdup... yes
+checking for strstr... yes
+checking for strtoul... yes
+checking for sig_atomic_t... yes
+checking for socklen_t... yes
+checking for type of socket size... size_t
+checking for libmcrypt-config... /usr/bin/libmcrypt-config
+checking for libmcrypt - version >= 2.4.11... yes
+checking for perl... /usr/bin/perl
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating subst
+config.status: creating src/Makefile
+config.status: creating package/solaris/Makefile
+config.status: creating init-script
+config.status: creating sample-config/nsca.cfg
+config.status: creating sample-config/send_nsca.cfg
+config.status: creating sample-config/nsca.xinetd
+config.status: creating include/config.h
+
+
+*** Configuration summary for nsca 2.9.1 01-27-2012 ***:
+
+ General Options:
+ -------------------------
+ NSCA port:  5667
+ NSCA user:  nagios
+ NSCA group: nagios
+
+
+Review the options above for accuracy.  If they look okay,
+type 'make all' to compile the NSCA daemon and client.
+
+cd ./src/; make all ; cd ..
+make[1]: Entering directory '/tmp/linux-nrpe-agent/subcomponents/nsca/nsca-2.9.1/src'
+gcc -g -O2 -DHAVE_LIBMCRYPT -I/usr/include -DHAVE_CONFIG_H -o nsca ./nsca.c ./netutils.c ./utils.c -L/usr/lib -lmcrypt  -lnsl -lwrap
+./nsca.c: In function ‘read_config_file’:
+./nsca.c:479:29: warning: implicit declaration of function ‘asprintf’ [-Wimplicit-function-declaration]
+                             asprintf(&checkresult_test,"%s/nsca.test.%i",check_result_path,getpid());
+                             ^
+./nsca.c: In function ‘handle_connection’:
+./nsca.c:1039:32: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘long unsigned int’ [-Wformat=]
+                 syslog(LOG_ERR,"Only able to send %d of %d bytes of init packet to client\n",rc,sizeof(send_packet));
+                                ^
+./nsca.c: In function ‘write_checkresult_file’:
+./nsca.c:1246:37: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘time_t {aka long int}’ [-Wformat=]
+         fprintf(checkresult_file_fp,"file_time=%d\n\n",current_time);
+                                     ^
+./nsca.c: In function ‘main’:
+./nsca.c:153:3: warning: ignoring return value of ‘getcwd’, declared with attribute warn_unused_result [-Wunused-result]
+   getcwd(config_file,sizeof(config_file));
+   ^
+./nsca.c: In function ‘write_pid_file’:
+./nsca.c:1447:3: warning: ignoring return value of ‘write’, declared with attribute warn_unused_result [-Wunused-result]
+   write(fd,pbuf,strlen(pbuf));
+   ^
+./nsca.c:1448:3: warning: ignoring return value of ‘fchown’, declared with attribute warn_unused_result [-Wunused-result]
+   fchown(fd,usr,grp);
+   ^
+In file included from /usr/include/fcntl.h:289:0,
+                 from ./../include/config.h:134,
+                 from ./../include/common.h:24,
+                 from ./nsca.c:19:
+In function ‘open’,
+    inlined from ‘read_config_file.constprop’ at ./nsca.c:480:48:
+/usr/include/x86_64-linux-gnu/bits/fcntl2.h:50:4: error: call to ‘__open_missing_mode’ declared with attribute error: open with O_CREAT or O_TMPFILE in second argument needs 3 arguments
+    __open_missing_mode ();
+    ^
+Makefile:24: recipe for target 'nsca' failed
+make[1]: *** [nsca] Error 1
+make[1]: Leaving directory '/tmp/linux-nrpe-agent/subcomponents/nsca/nsca-2.9.1/src'
+
+*** Compile finished ***
+
+If the compile finished without any errors, you should
+find client and server binaries in the src/ subdirectory.
+
+Read the README file for more information on installing
+the binaries, creating configuration files, and using
+the server and client.
+
+cp: cannot stat 'src/nsca': No such file or directory
+cp: cannot stat 'src/send_nsca': No such file or directory
+NSCA-POST
+
+real	0m4.189s
+user	0m1.756s
+sys	0m0.400s
+INSTALLING EXTRA PLUGINS...
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+
+################################################################################
+###                                                                          ###
+### NRPE is currently set to allow connections only from these IP addresses: ###
+###                                                                          ###
+### 127.0.0.1                                                                ###
+###                                                                          ###
+### If you would like to change this list, enter all IP addresses to allow,  ###
+### separated by spaces only, and then press Enter.                          ###
+### (Put the address(es) of your Nagios XI servers(s) here.)                 ###
+###                                                                          ###
+################################################################################
+
+Allow from:  
+Subcomponents installed OK
+
+Install complete!
